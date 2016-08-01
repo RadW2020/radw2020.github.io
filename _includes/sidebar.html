@@ -1,23 +1,21 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <h1>
+      <h2>
+        <p></p>
+      <img width="200" height="200" style="position: relative; border-radius: 50%; display: block; margin: 0 auto; top: 10px;"
+      src=" https://github.com/RadW2020/radw2020.github.io/blob/master/_includes/avatar.png?raw=true "/>
+    </h2>
+      <h2>
         <a href="{{ site.baseurl }}">
-
-              <div class="sidebar-about">
-          <img width="200" height="200" style="position: relative; border-radius: 50%;
-          display: block; margin: 0 auto; top: 10px;"
-          src="_includes/avatar.png"/>
-
           {{ site.title }}
-
         </a>
-      </h1>
+      </h2>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Posts</a>
+      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Inicio</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -32,8 +30,10 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}atom.xml">RSS</a>
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <p>&copy; {{ site.time | date: '%Y' }}. Todos los derechos reservados.</p>
   </div>
 </div>
