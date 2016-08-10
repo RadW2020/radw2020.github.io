@@ -20,7 +20,7 @@ los recursos que proporcionan sus productos.
 
 El curso se llama **Cátedra Uned-Hawei de Cloud Computing y Big Data** y está destinado preparar la certificiación HCNA (Huawei Network Certification Associate), haciendo incapié en los servidores [OceanStor 9000.](https://www.youtube.com/watch?v=HAGELUHssoQ)
 
-<a href="url"><img src="http://www-file.huawei.com/~/media/EBG/Video/images/large/en/Huawei%20OceanStor%209000%20Scale-out%20NAS.jpg?h=540&la=en-SA&w=960" align="top" height="190" ></a>
+<a href="url"><img src="http://image.slidesharecdn.com/huawei-131217172258-phpapp01/95/huawei-hpc-solutions-13-638.jpg?cb=1387358676" align="top" height="190" ></a>
 
 A los 10 alumnos con mejor aprovechamiento del curso (entre los que por suerte me encuentro) se les ha asignado una beca para realizar el examen oficial de manera gratuita.
 
