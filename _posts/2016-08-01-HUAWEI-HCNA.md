@@ -1,21 +1,29 @@
 ---
 layout: post
-title: HUAWEI
+title: HUAWEI-HCNA
 ---
+<a href="https://blogs.uned.es/catedrahuawei/"><img src="https://blogs.uned.es/catedrahuawei/wp-content/uploads/sites/11/2015/12/fondo-banner.jpg" align="top" height="70" ></a>
 
 Otro curso de la UNED que hice con anterioridad fue fruto de la colaboración de esta universidad
-con HUAWEI. [Noticia](http://portal.uned.es/portal/page?_pageid=93,52836153&_dad=portal&_schema=PORTAL).
+con HUAWEI.
+[Enlace a Noticia](http://portal.uned.es/portal/page?_pageid=93,52836153&_dad=portal&_schema=PORTAL).
+
 Esta empresa china está apostando fuerte por la educación y poniendo
 en valor las certificaciones que acreditan los conocimientos
 suficientes para operar su hardware.
 
-<a href="url"><img src="https://blogs.uned.es/catedrahuawei/wp-content/uploads/sites/11/2016/02/huawei-educacion-810x416.jpg" align="top" height="90" ></a>
+<a href="http://www.huaweieducacion.com/"><img src="https://blogs.uned.es/catedrahuawei/wp-content/uploads/sites/11/2016/02/huawei-educacion-810x416.jpg" align="top" height="190" ></a>
+
 Este hardware tiene un elevado nivel de desarrollo técnico y trata de hacer
 uso de las técnicas mas modernas para la gestión y aprovechamiento de
 los recursos que proporcionan sus productos.
 
-El curso se llama **Cátedra Uned-Hawei de Cloud Computing y Big Data**
+El curso se llama **Cátedra Uned-Hawei de Cloud Computing y Big Data** y está destinado preparar la certificiación HCNA (Huawei Network Certification Associate), haciendo incapié en los servidores [OceanStor 9000.](https://www.youtube.com/watch?v=HAGELUHssoQ)
 
+<a href="url"><img src="http://www.huaweieducacion.com/images/big-data.png" align="top" height="190" ></a>
 
+A los 10 alumnos con mejor aprovechamiento del curso (entre los que por suerte me encuentro) se les ha asignado una beca para realizar el examen oficial de manera gratuita.
 
-<a href="url"><img src="http://www.huaweieducacion.com/images/big-data.png" align="top" height="90" ></a>
+Los tres alumnos que obtengan mejores puntuaciones podrán realizar prácticas remuneradas durante seis meses en Huawei Madrid.
+
+Quiero agradecer desde aquí a todos los implicados en la gestión de esta cátedra por la oportunidad ofrecida y por el estupendo aliciente para formarnos como administradores de sus sistemas.
