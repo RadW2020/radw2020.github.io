@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ejemplo DocBook - Resumen Curso LINHD-UNED
+title: Ejemplo DocBook V5
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lacinia lacinia elit, blandit volutpat libero dignissim id. Sed dictum quam sed maximus efficitur. Nunc interdum mauris vel tellus gravida, vitae placerat velit tincidunt. Aenean consectetur felis nec tellus placerat, gravida consequat metus iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras elementum turpis nibh, condimentum tempor orci volutpat ut. Pellentesque semper, velit vel posuere hendrerit, augue mi rhoncus nisi, nec accumsan velit metus in metus. Fusce sit amet varius erat, non viverra enim. Aenean a erat et tellus congue ullamcorper sit amet sit amet sem.
