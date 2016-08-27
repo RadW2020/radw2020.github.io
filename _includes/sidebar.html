@@ -27,6 +27,9 @@
           {% if node.layout == "page" %}
             <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
           {% endif %}
+          {% if node.layout == "page-ext" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ page.enlace }}">{{ node.title }}</a>
+          {% endif %}
         {% endif %}
       {% endfor %}
 
