@@ -5,5 +5,4 @@ content: https://raw.githubusercontent.com/RadW2020/Huawei-HCNA-Cloud-Repo/maste
 ---
 
 
- {% capture my-include %}{% include_relative https://raw.githubusercontent.com/RadW2020/Huawei-HCNA-Cloud-Repo/master/Readme.md %}{% endcapture %}
- {{ my-include | markdownify }}
+ {% include_relative https://raw.githubusercontent.com/RadW2020/Huawei-HCNA-Cloud-Repo/master/Readme.md %}
