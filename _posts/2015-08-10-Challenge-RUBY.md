@@ -3,13 +3,13 @@ layout: post
 title: Ruby Challenge
 ---
 
-<a href="https://es.wikipedia.org/wiki/Ruby"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" align="top" height="70" ></a>
+<a href="https://es.wikipedia.org/wiki/Ruby"><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" align="top" height="100" ></a>
 
 Este año 2015 ha sido mi año para Ruby. Después de empaparme de recursos online (como los que puse en el anterior post) para aprender este lenguaje decidí aventurarme en algo mas emocionante. 
 
 Encontré a principios de año un challenge de programación de IAs en Ruby organizado por la escuela/bootcamp Ironhack para desarrolladores.
 
-La idea era hacer una liga, que durara varios meses, donde pudiéramos enfrentar nuestro código e ir viendo los resultados para hacer mejoras cada quice días. 
+La idea era hacer una liga, que durara varios meses, donde pudiéramos enfrentar nuestro código e ir viendo los resultados para hacer mejoras cada quince días. 
 
 Hemos estado usando la librería [RTanque](https://github.com/awilliams/RTanque). Librería que ya se había usado en otras ocasiones para competiciones en alguna universidad.
 
