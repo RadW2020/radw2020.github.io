@@ -18,7 +18,7 @@ La evolución de mi código fue muy emocionante, y las batallas también. Empec�
 Inicialmente era de los últimos, y parecía no tener oportunidad contra los 18 competidores. Pero poco a poco fui subiendo hasta que fuí seleccionado entre los 5 mejores para hacer la final (nos enfretaban por parejas y se ejecutaban 100 batallas de cada una). Al final quede el primero de los cinco en número de batallas ganadas. 
 Mi criatura se llama Cugel :)
 
-[LIGA_IRONHACK_RTANQUE_5_PRIMEROS_suma.jpg](https://postimg.org/image/qubx52wrz/)
+[[![LIGA_IRONHACK_RTANQUE_5_PRIMEROS_suma.jpg](https://s11.postimg.org/g7i3znomr/LIGA_IRONHACK_RTANQUE_5_PRIMEROS_suma.jpg)](https://postimg.org/image/qubx52wrz/)
 
 T01 el que mas caña me daba ganándome 48 de 50, lo que personalmente considero un empate.
 
