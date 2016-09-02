@@ -27,4 +27,6 @@ A los 10 alumnos con mejor aprovechamiento del curso (entre los que por suerte m
 
 Los tres alumnos que obtengan mejores puntuaciones podrán realizar prácticas remuneradas durante seis meses en Huawei Madrid.
 
+He realizado un resumen de la materia en Markdown, que este lenguaje me tiene ahora enganchado :) [Resumen](https://github.com/RadW2020/Huawei-HCNA-Cloud-Repo)
+
 Quiero agradecer desde aquí a todos los implicados en la gestión de esta cátedra por la oportunidad ofrecida y por el estupendo aliciente para formarnos como administradores de sus sistemas  :)
