@@ -3,12 +3,7 @@ layout: page
 title: Presentación
 ---
 
-
-
 Mi interés es hacer de este blog una especie de diario sobre como avanzo en el aprendizaje de las nuevas tecnologías.
-
-También escribir sobre experiencias pasadas que espero sean de vuestro interés.
-
 
 
 ### Presentación
