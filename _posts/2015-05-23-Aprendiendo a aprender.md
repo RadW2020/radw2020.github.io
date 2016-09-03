@@ -1,3 +1,8 @@
+---
+layout: post
+title: Aprendiendo a Aprender
+---
+
 Quiero hacer un post que condense todos los recursos que he usado para iniciarme mas formalmente en la programación.
 Todo empezó hace tiempo con **Khanacademy**.
 
