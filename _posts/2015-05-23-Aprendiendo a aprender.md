@@ -56,6 +56,7 @@ Tiene un sistema de aprendizaje muy autodidacta, a la par que social. Es un prog
 
 ![](http://rizecorp.yolasite.com/resources/ror_development.jpg)
 
-También hice una pasada por Ruby on Rails. Me animé a ello sobre todo cuando encontré el libro online gratuito https://www.railstutorial.org/ Está muy enfocado a la práctica y muy actualizado.
+También hice una pasada por Ruby on Rails. Me animé a ello sobre todo cuando encontré el libro online gratuito     
+[https://www.railstutorial.org/](https://www.railstutorial.org/). Está muy enfocado a la práctica y muy actualizado.
 
 Saludos

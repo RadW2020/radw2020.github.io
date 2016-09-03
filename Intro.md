@@ -1,13 +1,13 @@
 ---
-layout: post
-title: Introducción y Primer Post
+layout: page
+title: Introducción
 ---
 
 
-Este es el primer post que escribo en mi nuevo blog.
+
 Mi interés es hacer de este blog una especie de diario sobre como avanzo en el aprendizaje de las nuevas tecnologías.
 
-También escribiré sobre experiencias pasadas que espero sean de vuestro interés.
+También escribir sobre experiencias pasadas que espero sean de vuestro interés.
 
 
 
@@ -18,8 +18,8 @@ Mi lista de intereses es muy variada, pero os propongo una lista inicial reducid
 
 * Java
 * Android
-* JSF, ZK, J2EE
-* Lenguajes de Marcado: HTML, XML, Jekyll
+* JSF, J2EE
+* Lenguajes de Marcado: HTML, XML
 * Ruby + Ruby On Rails
 * MySQL, Oracle SQL, PostgreSQL
 * Hadoop, Spark
