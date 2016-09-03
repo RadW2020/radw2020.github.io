@@ -14,7 +14,7 @@ suficientes para operar su hardware.
 
 <a href="http://www.huaweieducacion.com/"><img src="https://blogs.uned.es/catedrahuawei/wp-content/uploads/sites/11/2016/02/huawei-educacion-810x416.jpg" align="top" height="190" ></a>
 
-Este hardware tiene un elevado nivel de desarrollo técnico y trata de hacer
+Este hardware tiene un elevado nivel de desarrollo técnico, y trata de hacer
 uso de las técnicas mas modernas para la gestión y aprovechamiento de
 los recursos que proporcionan sus productos. Como por ejemplo los servidores [OceanStor 9000.](https://www.youtube.com/watch?v=HAGELUHssoQ)
 
@@ -27,7 +27,6 @@ A los 10 alumnos con mejor aprovechamiento del curso (entre los que por suerte m
 
 Los tres alumnos que obtengan mejores puntuaciones podrán realizar prácticas remuneradas durante seis meses en Huawei Madrid.
 
-He realizado un resumen de la materia en Markdown, que este lenguaje me tiene ahora enganchado :) [Resumen](https://github.com/RadW2020/Huawei-HCNA-Cloud-Repo)
+He realizado un resumen de la materia en Markdown, que este lenguaje me tiene ahora enganchado :) [Resumen](https://github.com/RadW2020/Huawei-HCNA-Cloud-Repo/blob/master/Readme.md)
 
 Gracias y un saludo
-
