@@ -29,7 +29,7 @@ Encontré **CodeSchool**. Muy recomendable. Como **TeamTreeHouse** pero mejor. U
 
 Recuerdo con mucho cariño **RubyMonk**, no me pareció para  principiantes y hacerlo me supuso un esfuerzo considerable.
 
-No tenía ningún conocimiento de POO ni base académica y aquí fue donde empecé a vislumbrar las estructuras de clases y las lambdas entre otras.
+No tenía ningún conocimiento de POO ni base académica y aquí fue donde empecé a vislumbrar las estructuras de clases y lambdas entre otras.
 
 ![](http://www.tonylea.com/wp-content/uploads/2012/02/whys-poignant-guide.png)
 
@@ -52,7 +52,7 @@ Yo me lo jugué siendo un repositorio en github. A día de hoy también hay una 
 
 No quisiera terminar esta serie de recomendaciones son comentar sobre **exercism**.
 
-Tiene un sistema de aprendizaje muy autodidacta, a la par que social. Es un programa, o mas bien un sistema semiautomático, que te va ofreciendo problemas a resolver, poco a poco aumentando la dificultad. Tus soluciones se van subiendo a la web y allí puedes pedir opiniones a otros estudiantes como tú. Está enfocado a revisar código de otros y recibir feedback sobre tu código, en un entorno que facilita relacionarte con aquellos que están manejando un nivel más o menos similar al tuyo.
+Tiene un sistema de aprendizaje muy autodidacta, a la par que social. Es un programa, o mas bien un sistema semiautomático, que te va ofreciendo problemas a resolver, aumentando la dificultad poco a poco. Tus soluciones se van subiendo a la web y allí puedes pedir opiniones a otros estudiantes como tú. Está enfocado a revisar código de otros y recibir feedback sobre tu código, en un entorno que facilita relacionarte con aquellos que están manejando un nivel más o menos similar al tuyo.
 
 ![](http://rizecorp.yolasite.com/resources/ror_development.jpg)
 
