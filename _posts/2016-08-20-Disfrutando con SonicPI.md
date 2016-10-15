@@ -36,9 +36,11 @@ También ha creado un manual de uso que ya quisieran para sí Yamaha, Korg o Moo
 Cuando cojo un rato me pongo y engancha bastante. Si te gusta programar, y la música electrónica/ambient, es una gozada.
 Aquí dejo un trozo de un cover que he hecho de la canción Blue Monday de New Order.
 
-Si alguien se anima podemos hacer música juntos con un repo de github de por medio :) https://github.com/RadW2020/SonicPI_Songs
-```
+Si alguien se anima podemos hacer música juntos con un [repo de github](https://github.com/RadW2020/SonicPI_Songs) de por medio :)
+
 #### Blue Monday Cover ####
+
+```
 
 # base loop
 define :base do |num|
@@ -115,4 +117,5 @@ stahp 2
 in_thread delay: 66 do
   tumpa 4
 end
+
 ```
