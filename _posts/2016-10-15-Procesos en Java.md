@@ -78,7 +78,7 @@ Vemos como el IDE nos crea un método vacío, listo para que lo definamos
 Podemos definir dentro del método directamente la lógica de funcionamiento, pero es mejor definir un método nuevo con la funcionalidad que se va a ejecutar. En este caso *crearNuevoEditor()*.
 Desde el método *JButton1MouseClicked()* lo ejecutamos, y así queda ordenado en el caso que queramos ampliar la funcionalidad con mas método que hagan otras cosas.
 
-En el método *crearNuevoEditor()*  usamos la [clase process](http://docs.oracle.com/javase/8/docs/api/java/lang/Process.html) para llevar a cabo un [Runtime.getRuntime().exec](https://docs.oracle.com/javase/7/docs/api/java/lang/Runtime.html#exec(java.lang.String) y así ejecutar el jar que teníamos creado inicialmente como un proceso independiente
+En el método *crearNuevoEditor()*  usamos la [clase process](http://docs.oracle.com/javase/8/docs/api/java/lang/Process.html) para llevar a cabo un [Runtime.getRuntime().exec](https://docs.oracle.com/javase/7/docs/api/java/lang/Runtime.html#exec\(java.lang.String) y así ejecutar el jar que teníamos creado inicialmente como un proceso independiente
 
 ![](http://i64.tinypic.com/2z7imqc.jpg)
 
