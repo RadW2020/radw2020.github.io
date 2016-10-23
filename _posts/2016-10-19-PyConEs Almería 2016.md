@@ -14,7 +14,7 @@ Todo un lujo tenerlos aquí y un auténtico festival para los amantes de Python 
 En la del evento podemos ver el calendario de talleres y conferencias, repleto de eventos a todas horas.
 Por mi parte la única crítica que puedo hacer es cuando quería ver dos que ocurrían a la vez, ¡una pena!
 
-http://2016.es.pycon.org/es/schedule/
+[http://2016.es.pycon.org/es/schedule/](http://2016.es.pycon.org/es/schedule/)
 
 Este calendario es interesante porque se puede encontrar el material de muchos de los participantes, ya sea presentaciones en pdf, videos, o enlaces a github.
 
@@ -31,11 +31,11 @@ Los ejemplos que pusieron estaban orientados a la optimización de diseños indu
 Merece la pena echarle un vistazo a los materiales de trabajo que usaron:
 (ojo, para este y otros talleres lo mejor es usar el [Jupyter notebook](http://jupyter.org/))
 
-- introducción a los paquetes de Python Científico está en https://github.com/AeroPython/Taller-Aeropython-PyConEs16
+- [introducción a los paquetes de Python Científico](https://github.com/AeroPython/Taller-Aeropython-PyConEs16)
 
-- Algoritmos Genéticos y Sistemas complejos está en https://github.com/AeroPython/Taller-Algoritmos-Geneticos-PyConEs16
+- [Algoritmos Genéticos y Sistemas complejos]( https://github.com/AeroPython/Taller-Algoritmos-Geneticos-PyConEs16)
 
-- Introducción a los Algoritmos genéticos está en http://2016.es.pycon.org/media/keynotes/Introducci%C3%B3n_a_los_algoritmos_gen%C3%A9ticos.pdf
+- [Introducción a los Algoritmos genéticos]( http://2016.es.pycon.org/media/keynotes/Introducci%C3%B3n_a_los_algoritmos_gen%C3%A9ticos.pdf)
 
 
 Usaron un notebook con todo el código preparado en modo servidor y era una auténtica delicia seguir sus ejemplos y explicaciones de manera interactiva.
@@ -58,7 +58,7 @@ Esta charla se completaba con la de "Análisis de colores: cómo analizar tenden
 
 
 **py - reglas de asociación**
-https://github.com/intiveda/pyreglasasociacion
+[https://github.com/intiveda/pyreglasasociacion](https://github.com/intiveda/pyreglasasociacion)
 
 Esta ponencia fue puramente teórica, los autores aun no habían usado su sistema en un caso empresarial, pero aun así fue muy interesante.
 Se trata de un sistema de diseño de algoritmos usando reglas de asociación, para obtener predicciones y patrones.
@@ -67,7 +67,7 @@ Es recomendable bucear un los notebooks de su github y ver como se puede consegu
 ![](https://camo.githubusercontent.com/79e71a36859d29d387cfe2e5db79f693da087f44/68747470733a2f2f63646e2e7261776769742e636f6d2f6f70656e73697374656d61732d6875622f6f73627261696e2f6d61737465722f646f63732f736f757263652f5f7374617469632f6f73627261696e2d6c6f676f2d6e616d652e737667)
 
 **osBrain**
-https://peque.github.io/PyConES-Spain-2016-osbrain/
+[https://peque.github.io/PyConES-Spain-2016-osbrain/](https://peque.github.io/PyConES-Spain-2016-osbrain/)
 
 osBrain es parte del sistema base que usa la empresa [Open Sistemas](http://www.opensistemas.com/) que ha sido liberado para la comunidad de software libre.
 El objetivo empresarial de osBrain es la inversión automática en bolsa, pero la parte liberada (en comparación con el sistema general es solo una pequeña parte) puede usarse para cualquier proyecto que requiera análisis de grandes datos y toma de decisiones o recomendaciones.
