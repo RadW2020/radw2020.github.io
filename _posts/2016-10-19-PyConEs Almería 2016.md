@@ -11,7 +11,7 @@ Todo un lujo tenerlos aquí y un auténtico festival para los amantes de Python 
 
 
 
-En la del evento podemos ver el calendario de talleres y conferencias, repleto de eventos a todas horas.
+En la web del evento podemos ver el calendario de talleres y conferencias, repleto de eventos a todas horas.
 Por mi parte la única crítica que puedo hacer es cuando quería ver dos que ocurrían a la vez, ¡una pena!
 
 [http://2016.es.pycon.org/es/schedule/](http://2016.es.pycon.org/es/schedule/)
@@ -19,15 +19,13 @@ Por mi parte la única crítica que puedo hacer es cuando quería ver dos que oc
 Este calendario es interesante porque se puede encontrar el material de muchos de los participantes, ya sea presentaciones en pdf, videos, o enlaces a github.
 
 
-Evidentemente no pude ir a todas. Pero si puedo algunas cosas que me llamaron la atención de lo que vi.
-
-Comentaré alguna cosa de las que mas me llamaron la atención:
+Evidentemente no pude ir a todas. Pero sí puedo enlazar algunas cosas que me llamaron la atención de lo que vi:
 
 ![](https://raw.githubusercontent.com/AeroPython/Taller-Algoritmos-Geneticos-PyConEs16/master/static/aeropython_name_mini.png)
 
 Primero, mi preferida, por como estaba organizada y por la calidad de los ponentes: El taller **"Simplifica tu vida con sistemas complejos (y algoritmos genéticos)"**.
 
-Los ejemplos que pusieron estaban orientados a la optimización de diseños industriales aeronáuticos, y esto, lejos hacerse pesado, lo hacía todo mucho mas fácil de entender. Es la explicación mas clara de estos temas que he visto/leido en mi vida.
+Los ejemplos que pusieron estaban orientados a la optimización de diseños industriales aeronáuticos, y esto, lejos hacerse pesado, lo hacía todo mucho mas fácil de entender. Es la explicación mas clara sobre sistemas complejos que he visto/leido en mi vida.
 Merece la pena echarle un vistazo a los materiales de trabajo que usaron:
 (ojo, para este y otros talleres lo mejor es usar el [Jupyter notebook](http://jupyter.org/))
 
@@ -54,7 +52,7 @@ También resultaba una tabla de porcentajes de fiabilidad de acierto. El sistema
 Lo que si funcionaba estupendamente eran las estadísticas de previsión de acierto por cada foto. Este dato es muy importante para obtener fiabilidades de los resultados sobre grandes muestras.
 Al principio me sorprendía tanto esfuerzo para temas de ropa, pero luego estaba claro: análisis automático de tendencias de moda. ¡Ahí es nada! ;)
 
-Esta charla se completaba con la de "Análisis de colores: cómo analizar tendencias de moda automáticamente", donde el título lo dice todo, y que exponía otro integrante de la empresa Style Sage.
+Esta charla se completaba con la de **"Análisis de colores: cómo analizar tendencias de moda automáticamente"**, donde el título lo dice todo, y que exponía otro integrante de la empresa Style Sage.
 
 
 **py - reglas de asociación**
@@ -69,7 +67,7 @@ Es recomendable bucear un los notebooks de su github y ver como se puede consegu
 **osBrain**
 [https://peque.github.io/PyConES-Spain-2016-osbrain/](https://peque.github.io/PyConES-Spain-2016-osbrain/)
 
-osBrain es parte del sistema base que usa la empresa [Open Sistemas](http://www.opensistemas.com/) que ha sido liberado para la comunidad de software libre.
+osBrain es parte del sistema base que usa la empresa [Open Sistemas](http://www.opensistemas.com/) liberado para la comunidad de software libre.
 El objetivo empresarial de osBrain es la inversión automática en bolsa, pero la parte liberada (en comparación con el sistema general es solo una pequeña parte) puede usarse para cualquier proyecto que requiera análisis de grandes datos y toma de decisiones o recomendaciones.
 
 Esto es solo una muy pequeña muestra de lo que se podía encontrar en la PyConES-Spain-2016. Gran afluencia de público, muy buena organización, y satisfacción generalizada :)
