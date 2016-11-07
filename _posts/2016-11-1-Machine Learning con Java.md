@@ -75,4 +75,4 @@ Espero desarrollarlo en los próximos meses, se puede [encontrar en github](http
 
 Saludos :D
 
-PD: por cierto no os perdais los trabajos de los ganadores que son de primera calidad http://www.cajamardatalab.com/datathon-cajamar-pythonhack-2016/ganadores/
+PD: por cierto no os perdais los [trabajos de los ganadores](http://www.cajamardatalab.com/datathon-cajamar-pythonhack-2016/ganadores/) que son de primera calidad
