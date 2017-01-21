@@ -14,7 +14,7 @@ Hablemos de algo de teoría relacionada con Hibernate
 
 ## Singleton
 
-Esto es un patron de diseño que garantiza que una clase sólo tenga una instancia y proporciona un punto de acceso global a esta instancia.
+Esto es un patrón de diseño que garantiza que una clase sólo tenga una instancia y proporciona un punto de acceso global a esta instancia.
 A veces, varios clientes distintos precisan referenciar a un mismo elemento y queremos asegurarnos de que no hay mas de una instancia de ese elemento.
 El funcionamiento se podría reducir en los siguientes conceptos:
 
@@ -40,14 +40,14 @@ Más en:
 
 ## ¿Que es un objeto proxy en Hibernate?
 
-Un proxy es una clase generada dinamicamente por Hibernate para ayudar con la carga perezosa "lazy loading".
+Un proxy es una clase generada dinámicamente por Hibernate para ayudar con la carga perezosa "lazy loading".
 Carga perezosa significa que una entidad será cargada solo cuando se acceda a ella por primera vez. Y si esta tiene hijos, y sus hijos mas hijos, estos no se cargarán hasta que se acceda a ellos. Esta práctica evita que grandes bases de datos con objetos con complejas herencias sean cargadas en memoria al completo de primeras. Aumentando considerablemente el rendimiento.
 
 Otra definición mas informal puede ser: Un objeto que no contiene todos los datos que necesitas pero que sabe como obtenerlos.
 
 
 ## Ejemplos Hibernate
-Estos ejemplos continuan el proyecto del artículo anterior.
+Estos ejemplos continúan el proyecto del artículo anterior.
 
 Aquí se estan usando los métodos load() y get() desde el mismo main para probar su funcionamiento y diferencias.
 
@@ -70,7 +70,7 @@ Método para borrar un empleado.
 ![](http://i67.tinypic.com/2cnctph.jpg)
 
 
-Si encontrais fallos en este código no dudeis en revisar el [repositorio original](https://github.com/RadW2020/Hibernate_Empresaz), seguramente está corregido, actualizado y/o ampliado. Y si no es así sois bienvenidos a modificar lo que querais ;)
+Si encontráis fallos en este código no dudéis en revisar el [repositorio original](https://github.com/RadW2020/Hibernate_Empresaz), seguramente está corregido, actualizado y/o ampliado. Y si no es así sois bienvenidos a modificar lo que queráis ;)
 
 
 Saludos!

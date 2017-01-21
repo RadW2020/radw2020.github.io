@@ -12,7 +12,7 @@ He usado Netbeans 8.2 y JDK 8 en Windows 10. La base de datos es MySQL y la mani
 
 ![](http://i68.tinypic.com/2hh3ol5.jpg)
 
-En este artículo vamos a crear un proyecto en java y a configurar Hibernate para que actue entre la base de datos MySQL, que tenemos funcionando mediante el puerto 3306, y nuestro código en Java. Gracias a Hibernate trataremos la Base de Datos relacional como si fueran objetos.
+En este artículo vamos a crear un proyecto en java y a configurar Hibernate para que actúe entre la base de datos MySQL, que tenemos funcionando mediante el puerto 3306, y nuestro código en Java. Gracias a Hibernate trataremos la Base de Datos relacional como si fueran objetos.
 
 Para ello comprobamos que tenemos el plugin Hibernate instalado en nuestro Netbeans.
 
@@ -30,7 +30,7 @@ Introducimos contraseña. Al ser una BD en modo local no hay que configurar nada
 
 ![](http://i64.tinypic.com/o0xxex.jpg)
 
-Ya tenemos conexión a nuesta BD MySQL. La Base de Datos Empresaz es la que vamos a usar. Se puede ver de que trata exactamente en este repositorio:
+Ya tenemos conexión a nuestra BD MySQL. La Base de Datos Empresaz es la que vamos a usar. Se puede ver de que trata exactamente en este repositorio:
 https://github.com/RadW2020/Hibernate-Toma-de-Contacto/blob/master/empresaz.sql
 
 ![](http://i67.tinypic.com/357m35z.jpg)
@@ -91,15 +91,15 @@ En este caso queremos ver todo el log de depuración resultante de ejecutar oper
 
 ![](http://i64.tinypic.com/30rshom.jpg)
 
-Esta opción de parser, en teoría viene implementada en hibernate por defecto desde la versión 4.1. Aun así lo podemos activar por aquí.
+Esta opción de parser, en teoría viene implementada en Hibernate por defecto desde la versión 4.1. Aun así lo podemos activar por aquí.
 
 ![](http://i67.tinypic.com/oaavt1.jpg)
 
-Seguimos creando archivos hibernate
+Seguimos creando archivos Hibernate
 
 ![](http://i65.tinypic.com/2w32hj4.jpg)
 
-En este caso el HibernateUtil, que nos proporciona una referencia al objeto SessionFactory para que cualquier clase tenga acceso al objeto sesion en la aplicación. Mas información en [CursoHibernate.HibernateUtil](http://www.cursohibernate.es/doku.php?id=unidades:07_arquitectura:01_hibernateutil)
+En este caso el HibernateUtil, que nos proporciona una referencia al objeto SessionFactory para que cualquier clase tenga acceso al objeto sesión en la aplicación. Mas información en [CursoHibernate.HibernateUtil](http://www.cursohibernate.es/doku.php?id=unidades:07_arquitectura:01_hibernateutil)
 
 
 
@@ -109,7 +109,7 @@ Seleccionamos nombre y paquete
 
 ![](http://i63.tinypic.com/16jecdi.jpg)
 
-Ya tenemos nuestro archivo creado automaticamente
+Ya tenemos nuestro archivo creado automáticamente
 
 ![](http://i65.tinypic.com/1ttvue.jpg)
 
@@ -129,7 +129,7 @@ Añadimos las tablas sobre las que vamos a trabajar
 
 ![](http://i65.tinypic.com/1t2dkz.jpg)
 
-Este es el archivo generado por ingenieria inversa en modo texto.
+Este es el archivo generado por ingeniería inversa en modo texto.
 
 ![](http://i68.tinypic.com/dgo4cm.jpg)
 
@@ -159,7 +159,7 @@ El procedimiento es siempre parecido: se obtiene un objeto SessionFactory y abri
 
 ![](http://i66.tinypic.com/2mr65ad.jpg)
 
-Este podría ser un main en el que mostramos los departamentos, creamos un departeamento nuevo, y comprobamos su inserción.
+Este podría ser un main en el que mostramos los departamentos, creamos un departamento nuevo, y comprobamos su inserción.
 
 ![](http://i63.tinypic.com/30hymfk.jpg)
 
@@ -170,6 +170,6 @@ Esta es la salida por consola. Recuerda que tenemos el modo sql debug activo, po
 
 En el siguiente artículo seguiré investigando cosas sobre Hibernate y probando sus funcionalidades.
 
-Usaré este [repositorio en Github](https://github.com/RadW2020/Hibernate_Empresaz) para todo el código que se muestre. Así que si habeis intentado copiar los métodos y frustrado por que era una imagen, no desespereis ;)
+Usaré este [repositorio en Github](https://github.com/RadW2020/Hibernate_Empresaz) para todo el código que se muestre. Así que si habéis intentado copiar los métodos y frustrado por que era una imagen, no desesperéis ;)
 
 Saludos!
