@@ -170,6 +170,6 @@ Esta es la salida por consola. Recuerda que tenemos el modo sql debug activo, po
 
 En el siguiente artículo seguiré investigando cosas sobre Hibernate y probando sus funcionalidades.
 
-Usaré este repositorio en Github https://github.com/RadW2020/Hibernate_Empresaz para todo el código que se muestre. Así que si habeis intentado copiar los métodos y frustrado por que era una imagen, no desespereis ;)
+Usaré este repositorio en Github [](https://github.com/RadW2020/Hibernate_Empresaz) para todo el código que se muestre. Así que si habeis intentado copiar los métodos y frustrado por que era una imagen, no desespereis ;)
 
 Saludos!
