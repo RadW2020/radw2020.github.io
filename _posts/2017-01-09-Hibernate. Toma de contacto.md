@@ -8,7 +8,7 @@ Hibernate.
 ![](https://alejandromunyozsegrera.files.wordpress.com/2014/01/hibernate.png)
 https://es.wikipedia.org/wiki/Hibernate
 
-He usado Netbeans 8.2 y JDK 8 en Windows 10. La base de datos es MySQL y la manipulo con MySQL Workbench, que es una de las herramientas que se instalan con http://dev.mysql.com/downloads/installer/
+He usado Netbeans 8.2 y JDK 8 en Windows 10. La base de datos es MySQL y la manipulo con MySQL Workbench, que es una de las herramientas que se instalan con [el instalador automático](http://dev.mysql.com/downloads/installer/)
 
 ![](http://i68.tinypic.com/2hh3ol5.jpg)
 
@@ -170,6 +170,6 @@ Esta es la salida por consola. Recuerda que tenemos el modo sql debug activo, po
 
 En el siguiente artículo seguiré investigando cosas sobre Hibernate y probando sus funcionalidades.
 
-Usaré este repositorio en Github [](https://github.com/RadW2020/Hibernate_Empresaz) para todo el código que se muestre. Así que si habeis intentado copiar los métodos y frustrado por que era una imagen, no desespereis ;)
+Usaré este [repositorio en Github](https://github.com/RadW2020/Hibernate_Empresaz) para todo el código que se muestre. Así que si habeis intentado copiar los métodos y frustrado por que era una imagen, no desespereis ;)
 
 Saludos!

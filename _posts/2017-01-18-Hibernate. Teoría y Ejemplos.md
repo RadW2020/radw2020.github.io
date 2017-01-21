@@ -3,9 +3,9 @@ layout: post
 title: Hibernate - Teoría y ejemplos
 ---
 
-Base de datos usada para el artículo: https://github.com/RadW2020/Hibernate-Toma-de-Contacto
+Base de datos usada para el artículo: [script SQL](https://github.com/RadW2020/Hibernate-Toma-de-Contacto)
 
-Repositorio con el proyecto de Netbeans usado para el anterior artículo y este: https://github.com/RadW2020/Hibernate_Empresaz
+Repositorio con el proyecto de Netbeans usado para el anterior artículo y este: [Repositorio Github](https://github.com/RadW2020/Hibernate_Empresaz)
 
 
 
@@ -26,16 +26,16 @@ En resumen, un objeto SessionFactory por aplicación y un objeto Session por cli
 
 _Un poco mas de teoría..._
 
-** Diferencia entre session.get() y session.load() **
+### Diferencia entre session.get() y session.load()
 
 Hay mucha teoría y se puede profundizar en los conceptos gracias a enlaces como estos. Pero para simplificar al máximo diremos que el método get devuelve el objeto de la base de datos y el método load() devuelve un objeto proxy con un identificador.
 Más en:
 
-http://www.dosideas.com/noticias/java/835-hibernate-y-los-metodos-get-y-load
+[Hibernate, get() y load()](http://www.dosideas.com/noticias/java/835-hibernate-y-los-metodos-get-y-load)
 
-https://coderanch.com/t/606310/databases/Hibernate-load-confused-Hibernate-Proxies
+[Hibernate Proxies](https://coderanch.com/t/606310/databases/Hibernate-load-confused-Hibernate-Proxies)
 
-** ¿Que es un objeto proxy en Hibernate? **
+## ¿Que es un objeto proxy en Hibernate?
 
 Un proxy es una clase generada dinamicamente por Hibernate para ayudar con la carga perezosa "lazy loading".
 Carga perezosa significa que una entidad será cargada solo cuando se acceda a ella por primera vez. Y si esta tiene hijos, y sus hijos mas hijos, estos no se cargarán hasta que se acceda a ellos. Esta práctica evita que grandes bases de datos con objetos con complejas herencias sean cargadas en memoria al completo de primeras. Aumentando considerablemente el rendimiento.
@@ -45,7 +45,9 @@ Otra definición mas informal puede ser: Un objeto que no contiene todos los dat
 
 ## Ejemplos Hibernate
 
-`public static void insertaEmp(Empleados emp){
+
+```
+public static void insertaEmp(Empleados emp){
   Session sesion = null;
   try{
       //obtiene una sesion
@@ -62,5 +64,5 @@ Otra definición mas informal puede ser: Un objeto que no contiene todos los dat
   } finally {
       sesion.close();
   }
-
-}`
+}
+```
