@@ -10,7 +10,9 @@ Repositorio con el proyecto de Netbeans usado para el anterior artículo y este:
 
 
 Hablemos de algo de teoría relacionada con Hibernate
+
 ## Singleton
+
 Esto es un patron de diseño que garantiza que una clase sólo tenga una instancia y proporciona un punto de acceso global a esta instancia.
 A veces, varios clientes distintos precisan referenciar a un mismo elemento y queremos asegurarnos de que no hay mas de una instancia de ese elemento.
 El funcionamiento se podría reducir en los siguientes conceptos:
@@ -44,25 +46,30 @@ Otra definición mas informal puede ser: Un objeto que no contiene todos los dat
 
 
 ## Ejemplos Hibernate
+Estos ejemplos continuan el proyecto del artículo anterior.
+
+Aquí se estan usando los métodos load() y get() desde el mismo main para probar su funcionamiento y diferencias.
+
+![](http://i66.tinypic.com/534dp4.jpg)
+
+Esta es la salida por consola.
+
+![](http://i67.tinypic.com/143m5nd.jpg)
+
+Método para insertar un empleado en la tabla
+
+![](http://i65.tinypic.com/2wrnos6.jpg)
+
+Método que modifica el salario y comisión de un empleado dado su número de identificación.
+
+![](http://i63.tinypic.com/x4opw4.jpg)
+
+Método para borrar un empleado.
+
+![](http://i67.tinypic.com/2cnctph.jpg)
 
 
-```
-public static void insertaEmp(Empleados emp){
-  Session sesion = null;
-  try{
-      //obtiene una sesion
-      SessionFactory sf = HibernateUtil.getSessionFactory();
-      //abre la sesion
-      sesion = sf.openSession();
-      //comienza una transaccion
-      Transaction tx = sesion.beginTransaction();
-      System.out.println("Inserta un empleado en la tabla Empleados");
-      sesion.save(emp);
-      tx.commit();            
-  } catch (HibernateException hex){
-      System.err.println("Error " + hex.getCause() + ", " + hex.getMessage());
-  } finally {
-      sesion.close();
-  }
-}
-```
+Si encontrais fallos en este código no dudeis en revisar el [repositorio original](https://github.com/RadW2020/Hibernate_Empresaz), seguramente está corregido, actualizado y/o ampliado. Y si no es así sois bienvenidos a modificar lo que querais ;)
+
+
+Saludos!
