@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hibernate. Toma de contacto
+title: Hibernate - Toma de contacto
 ---
 Esta serie de ejemplos es la que me ha servido para una primera toma de contacto con
 Hibernate.

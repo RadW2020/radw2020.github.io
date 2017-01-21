@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hibernate. Teoría y ejemplos
+title: Hibernate - Teoría y ejemplos
 ---
 
 Base de datos usada para el artículo: https://github.com/RadW2020/Hibernate-Toma-de-Contacto
