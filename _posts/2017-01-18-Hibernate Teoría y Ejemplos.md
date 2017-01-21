@@ -2,6 +2,7 @@
 layout: post
 title: Hibernate - Teoría y ejemplos
 ---
+(Continuación del anterior post)
 
 Base de datos usada para el artículo: [script SQL](https://github.com/RadW2020/Hibernate-Toma-de-Contacto)
 
