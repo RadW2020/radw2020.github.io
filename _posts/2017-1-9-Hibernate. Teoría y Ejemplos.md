@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Hibernate: Teoría y ejemplos
+title: Hibernate. Teoría y ejemplos
 ---
 
 Base de datos usada para el artículo: https://github.com/RadW2020/Hibernate-Toma-de-Contacto
 
-Repositorio con el proeycto de Netbeans usado para el anterior artículo y este.
+Repositorio con el proyecto de Netbeans usado para el anterior artículo y este: https://github.com/RadW2020/Hibernate_Empresaz
+
 
 
 Hablemos de algo de teoría relacionada con Hibernate
