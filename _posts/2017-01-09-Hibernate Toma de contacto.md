@@ -139,6 +139,9 @@ Por último los POJOs y los archivos de mapeado
 
 Definimos su propio paquete ya que nos generará una serie de archivos. Las clases java con sus atributos,  constructores y métodos de get y set.
 Y los archivos xml de mapeado hibernate.
+Este binomio xml-ClasesDeJava mapea la base de datos relacional y genera una capa intermedia que trata la tabla de datos relacional como una tabla objeto-relacional.
+De esta forma nos podemos relacionar con la tabla como si fueran objetos Java.
+Hibernate puede generar autométicamente los constructores y los metodos get y set, después podemos implementar los métodos que creamos conveniente.
 
 ![](http://i64.tinypic.com/2mdjv3l.jpg)
 

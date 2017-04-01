@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hibernate - Teoría y ejemplos
+title: Hibernate - Un poco de Teoría y ejemplos
 ---
 (Continuación del anterior post)
 
