@@ -18,10 +18,10 @@ Este manual, inicialmente puede ser un documento personal del técnico encargado
 
 Se divide el plan integral de implantación de Odoo en cinco fases:
 1. Análisis
--	Diseño
--	Realización
--	Producción
-- Mantenimiento
+2. Diseño
+3. Realización
+4. Producción
+5. Mantenimiento
 
 ## FASES DEL PROYECTO
 ### Fase 1: Análisis (Preparación del proyecto)
@@ -154,13 +154,15 @@ El mantenimiento también incluye posibles actualizaciones del software.
 
 
 
-Enlaces bibliografía:
-https://dialnet.unirioja.es/descarga/articulo/2573348.pdf
+##### Enlaces bibliografía:
+[https://dialnet.unirioja.es/descarga/articulo/2573348.pdf](https://dialnet.unirioja.es/descarga/articulo/2573348.pdf)
 
-http://upcommons.upc.edu/bitstream/handle/2099.1/18382/PFC_Implantaci%20n%20de%20un%20sistema%20ERP%20SAP%20en%20una%20empresa.pdf?sequence=1
+[https://books.google.es/books/about/Aproximaci%C3%B3n_a_la_ingenier%C3%ADa_del_softw.html?id=5W-nDAAAQBAJ&redir_esc=y&hl=es](https://books.google.es/books/about/Aproximaci%C3%B3n_a_la_ingenier%C3%ADa_del_softw.html?id=5W-nDAAAQBAJ&redir_esc=y&hl=es)
 
-http://www.anajuaristi.com/como-realizar-el-analisis-inicial-para-implantar-un-erp/85.html
+[http://upcommons.upc.edu/bitstream/handle/2099.1/18382/PFC_Implantaci%20n%20de%20un%20sistema%20ERP%20SAP%20en%20una%20empresa.pdf?sequence=1](http://upcommons.upc.edu/bitstream/handle/2099.1/18382/PFC_Implantaci%20n%20de%20un%20sistema%20ERP%20SAP%20en%20una%20empresa.pdf?sequence=1)
 
-http://es.openerp.wikia.com/wiki/Como_realizar_el_an%C3%A1lisis_inicial_para_implantar_un_ERP
+[http://www.anajuaristi.com/como-realizar-el-analisis-inicial-para-implantar-un-erp/85.html](http://www.anajuaristi.com/como-realizar-el-analisis-inicial-para-implantar-un-erp/85.html)
 
-https://es.wikipedia.org/wiki/Sistema_de_planificaci%C3%B3n_de_recursos_empresariales
+[http://es.openerp.wikia.com/wiki/Como_realizar_el_an%C3%A1lisis_inicial_para_implantar_un_ERP](http://es.openerp.wikia.com/wiki/Como_realizar_el_an%C3%A1lisis_inicial_para_implantar_un_ERP)
+
+[https://es.wikipedia.org/wiki/Sistema_de_planificaci%C3%B3n_de_recursos_empresariales](https://es.wikipedia.org/wiki/Sistema_de_planificaci%C3%B3n_de_recursos_empresariales)
