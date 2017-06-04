@@ -17,7 +17,7 @@ El evento se engloba dentro de la [JamToday Network](http://www.jamtoday.eu/abou
 
 Este año la temática de diseño ha sido "Hábitos de vida saludables".
 
-La [organización](http://www.jamtodayalmeria.com/wp-content/uploads/2015/06/cabecera-1.png) del evento, ya con la experiencia del año pasado, lo hicieron mejor si cabe. Incluso pusieron una máquina recreativa DIY en la entrada para los ratos de descanso :)
+La [organización](http://www.consorciofernandodelosrios.es/) del evento, ya con la experiencia del año pasado, lo hicieron mejor si cabe. Incluso pusieron una máquina recreativa DIY en la entrada para los ratos de descanso :)
 
 El IES Al Andalus cedió sus instalaciones para la realización de charlas, talleres y el trabajo de los equipos. Muy de agradecer porque allí hay espacio de sobra para todo.
 
