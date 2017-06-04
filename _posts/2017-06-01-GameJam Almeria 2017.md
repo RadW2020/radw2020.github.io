@@ -25,7 +25,7 @@ Muchos colaboradores del año pasado repitieron. E hicieron una labor genial, ay
 
 También hubo nuevas caras en los expertos, algunos de ellos especialistas en hábitos de vida saludables que se interesaron mucho por las decisiones de diseño de los videojuegos que se estaban haciendo.
 
-En esta ocasión fui con un par de amigos, en un ambiente distendido pero con muchas ganas. Éramos un equipo de tres, así que andabamos con desventaja respecto a muchos equipos que estaban formados por cinco, el máximo permitido. 
+En esta ocasión fui con un par de amigos, en un ambiente distendido pero con muchas ganas. Éramos un equipo de tres, así que andábamos con desventaja respecto a muchos equipos que estaban formados por cinco, el máximo permitido. 
 
 Estos son los juegos que se subieron a la plataforma de gamejolt con [UNITY](http://jams.gamejolt.io/jamtodayalmeria2017/games)
 
@@ -33,11 +33,11 @@ Y aquí los desarrollados con [SCRATCH](https://scratch.mit.edu/studios/4066947/
 
 ![](https://m.gjcdn.net/game-header/1000/259174-qsbznkk5.jpg)
 
-Nosostros, System_32, Nos propusimos hacer tres minijuegos e integrarlos en una interfaz. El objetivo era muy ambicioso dada nuestra experiencia y escaso tiempo disponible, pero nos pusimos manos a la obra y quedamos muy contentos con el resultado.
+Nosostros, System_32, nos propusimos hacer tres minijuegos e integrarlos en una interfaz. El objetivo era muy ambicioso dada nuestra experiencia y escaso tiempo disponible, pero nos pusimos manos a la obra y quedamos muy contentos con el resultado.
 
 Como colofón final de la participación los jueces nos pedían un video para mostrar el trabajo realizado. [VIDEO](https://vimeo.com/219279205 ) 
 
-La experiencia final: con los expertos, la organizacion, la instalaciones, los talleres, los premios, lo que he aprendido y el video de recuerdo, ES PARA REPETIR :)
+La experiencia final: con los expertos, la organización, la instalaciones, los talleres, los premios, lo que he aprendido y el video de recuerdo, ES PARA REPETIR :)
 
 
 Nos vemos el año que viene 
