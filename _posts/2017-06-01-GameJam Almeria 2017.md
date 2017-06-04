@@ -39,6 +39,7 @@ Como colofón final de la participación los jueces nos pedían un video para mo
 
 La experiencia final: con los expertos, la organización, la instalaciones, los talleres, los premios, lo que he aprendido y el video de recuerdo, ES PARA REPETIR :)
 
+![](https://lh3.googleusercontent.com/UIzhEp9YEYjdzyOq96KQR-a_zWV3saHUkECev_Mdid24UUDq76XZWr_3VBnE_2DhIEVZ0ma83JQqSNiQ-8txr86L0cyl16go6BiX-LOqitGnl-QC14jrejVysPxMeBmfg1mKQwE7-u9cXmK6bphHeCK7y8ZAPjxX8M20M5NN8Y1WV3x6pp9GEM2XOLSM9Td8-bpaDlZCYtaPo47Nwt2DhkhvsmtZIw0vDeW8ZHpYBfwHmAAz7Pf0Zw_OKLKWx0krCOmaHbuU89WOkAvjhu35jdUKQBNms6a0rRZ-tdCMkP874s52KV4ydMn8aDCXD90bR9XlyXp3WKy7LzLbnNKYT3kyZmaFSAviY0T515ffAvDen0x8Kc7uYvrXGlSC9rZE_Bo9Swc6qtcVj3T5LnSbmQRncowY_e_LfHVyc6BphezrPa81Tx_t5mgdWXrEIfFtHGrRx4UJzTZdz2-NaBZyzlCKUr_dEdqgtk7FztE-wMaXbc3-onAAl19B6EvIDSEN4bXh6HKlG6XOeve7T3Yu1JFlGfUq_Z7Kbg7xYZf2DfiWEHAUiJcb7Bdeea-5kEEL9e5dwCFdruWqb4gWQxxIwjaq4kVgFp-eeNjwLHRb4IP01BavoC3xsywdgiTtY0l1vy4DINC_N1JvUdB-qLb5g_s1gVhesW_1h4UFoMjDfQ=w966-h389-no)
 
 Nos vemos el año que viene 
 
