@@ -13,21 +13,45 @@ Antes de ponernos manos a la obra tenemos que afilar las herramientas y preparar
 en el argot gastronómico se conoce como [*Mise en place*](https://es.wikipedia.org/wiki/Mise_en_place). 
 
 Este paso lo voy a hacer un poco mas exhaustivo para que sirva en futuros ejercicios.
+
 Primeramente la estructura de direcciones.
+
 ![](http://i.imgur.com/jkfgLjr.png)
-Y los detalles pormenorizados. Hay que tener en cuenta que los miembros de cada PDS heredan las 
+
+Y los detalles pormenorizados. 
+
+Hay que tener en cuenta que los miembros de cada PDS heredan las 
 características del dataset en el que están alojados (si han sido creados dentro de él). 
+
+COBOL 
+
 ![](http://i.imgur.com/KuWS6P1.png)
+
+COPYS
 
 ![](http://i.imgur.com/5h1TzR2.png)
 
+LOAD
+
 ![](http://i.imgur.com/b0GCfg9.png)
+
+OBJ
+
 ![](http://i.imgur.com/WhoET1F.png)
+
+DATA
+
 ![](http://i.imgur.com/2sSOmqe.png)
+
+JCL
+
 ![](http://i.imgur.com/pAH2zhu.png)
 
-Este es el archivo de ejemplo que vamos a ordenar. Está creado de manera arbitraria con algunos
+Este es el archivo de ejemplo que vamos a ordenar. 
+
+Está creado de manera arbitraria con algunos
 códigos iguales para ver como se comporta en estos casos. 
+
 ![](http://i.imgur.com/GRwc49s.png)
 
 El JOB que lanza esta operación se compone de dos pasos. Uno que borra el archivo resultante, 
@@ -39,20 +63,23 @@ ordena y escribe una salida.
 El paso DELETE ejecuta la herramienta IDCAMS. Esta sirve para realizar operativas sobre ficheros VSAM.
 Con ella podemos por ejemplo crear un archivo, borrarlo, copiarlo o imprimirlo.
 
-El Card SYSPRINT el lugar al que deseamos que se envíen todos los mensajes generados durante 
+El Card SYSPRINT indica el lugar al que deseamos que se envíen todos los mensajes generados durante 
 el proceso de ejecución. Si ponemos SYSOUT=* entonces dicha información se enviará directamente 
 al SPOOL (a la MSGCLASS indicada en nuestro job).
 
 El Card SYSIN sirve para introducir la instrucción que queremos que ejecute IDCAMS. En este caso
-borrar un fichero dado. Se fuerza la salida MAXCC a cero para evitar que se pare el job si no
-encuentra el fichero y de un error.
+borrar un fichero dado. Se fuerza la salida MAXCC a cero para evitar que se pare el job dando un error
+ si no encuentra el fichero.
 
 ![](http://i.imgur.com/jA3oP4O.png)
 
 El paso ORDENA ejecuta la herramienta SORT.
+
 Se define el archivo de entrada (el de los paises en este caso) en SORTIN, y el archivo que 
 queremos crear con la salida en SORTOUT.
+
 Enviamos la salida de mensajes generados al SPOOL igual que en IDCAMS.
+
 Y por último introducimos los parámetros que queremos aplicar en SYSIN.
 
 ![](http://i.imgur.com/jFrMkpZ.png)
@@ -69,7 +96,7 @@ El resultado de la ejecución lo podemos ver abriendo el archivo creado por SORT
 Vemos como ha ordenado de menos a mayor según el código (siguiendo la primera isntrucción)
 , y de manera ascendente según el texto en el caso de coincidencias, vease los 66.
 
-![](http://i.imgur.com/Zw5YBdq.png)
+![](http://i.imgur.com/wn2O1aV.png)
 
 Esto es todo por ahora :)
 
