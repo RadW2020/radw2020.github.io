@@ -15,6 +15,8 @@ poniendo el número a la derecha del nombre.
 
 El encabezado del programa es trivial. Así que prestemos atención al ENVIRONMENT DIVISION.
 
+## ENVIRONMENT DIVISION
+
 **Importante recordar que hay muchas maneras diseñar este código obteniendo el mismo resultado.
 Esta es una de ellas**
 
@@ -29,6 +31,7 @@ según un código devuelto.
 
 E idem  para el archivo de salida.
 
+## DATA DIVISION
 
 En la DATA DIVISION - FILE SECTION se definen los datos que vamos a tratar.
 
@@ -40,6 +43,8 @@ Para la salida hacemos algo similar, salvo el orden invertido de Nombre e ID, qu
 de la solución de diseño que hemos elegido.
  
 ![](http://i.imgur.com/jNH9wCt.png)
+
+## PROCEDURE DIVISION
 
 En la WORKING STORAGE SECTION declaramos las variables para almacenar los File Status y una variable
  para controlar la lógica de nuestro algoritmo.
@@ -79,6 +84,8 @@ Este es el resultado de su ejecución:
 ![](http://i.imgur.com/eVNVog2.png)
 
 :D
+
+## JOBs JCL
 
 En este caso para las pruebas hemos creado dos JOBs , uno para compilar y enlazar, y otro para la ejecución.
 
@@ -131,7 +138,7 @@ El COMPILE and LINK es como el de cualquier otro visto hasta ahora.
 //*    ARRIBA ---------------------------------------   PRINCIPAL                            
 ~~~
 
-Sin embargo en el ejecutador, debemos introducir la Data Definition de ENTRADA y SALIDA tras la invocación
+Sin embargo en el ejecutador, debemos introducir la Data Definition de ENTRADA y SALIDA, tras la invocación
 a nuestro programa recien compilado.
 
 ~~~
