@@ -7,20 +7,22 @@ Vamos a crear un programa COBOL que lea un fichero, modifique los registros, y g
 el resultado de sus operaciones en un archivo de salida.
 
 El archivo a usar es el generado después del SORT, visto en el anterior post.
-Definimos que el registro tiene dos campos, el número y el nombre del pais. Vamos darle la vuelta
+
+Cada registro tiene dos campos, el número y el nombre del pais. Vamos darle la vuelta
 poniendo el número a la derecha del nombre.
 
 ![](http://i.imgur.com/mUBoRHt.png)
 
 El encabezado del programa es trivial. Así que prestemos atención al ENVIRONMENT DIVISION.
 
-**Importante recordar que hay muchas maneras diseñar este código obteniendo el mismo resultado,
+**Importante recordar que hay muchas maneras diseñar este código obteniendo el mismo resultado.
 Esta es una de ellas**
 
 En el INPUT-OUPUT SECTION definimos un FILE-CONTROL con dos archivos.
 
-IN-FILE que usaremos como archivo de entrada y que es asignado a ENTRADA (este nombre 
+IN-FILE, que usaremos como archivo de entrada y que es asignado a ENTRADA (este nombre 
 de asignación deberá coincidir con la definición que usemos en el script de ejecución).
+
 Se guarda el estado del archivo en una variable para poder identificar errores concretos 
 según un código devuelto.  
 [TABLA CÓDIGOS DE ERROR](http://www.escobol.com/modules.php?name=Sections&op=viewarticle&artid=21)
@@ -48,18 +50,19 @@ En la WORKING STORAGE SECTION declaramos las variables para almacenar los File S
 
 WS-EOF tomará el valor S cuando llegemos al final de la lectura del archivo.
 
-100-INICIO se ejcuta una sola vez. Inspecciona los File Status después de las aperturas para informar
+**100-INICIO** se ejecuta una sola vez. 
+Inspecciona los File Status después de las aperturas para informar
 de cualquier problema, y termina el programa si encuentra algo diferente a 00.
 
 Por último controlamos de manera explícita si nuestro puntero de lectura está ya en el final del archivo.
-Si es así, no se ejecutará 200-PROCESO por la condición UNTIL.
+Si es así, cambiará el valor de WS-EOF y no se ejecutará 200-PROCESO por la condición UNTIL.
 
-Nos evitaremos comportamientos extraños como la inserción de un registro extra en blanco en nuestro
+De esta manera nos evitaremos comportamientos extraños como la inserción de un registro extra en blanco en nuestro
 archivo de salida.
 
 ![](http://i.imgur.com/Aoo8RjQ.png)
 
-Una vez hechas todas las preparaciones previas, el párrafo 200-PROCESO queda muy simplificado:
+Una vez hechas todas las preparaciones previas, el párrafo **200-PROCESO** queda muy simplificado:
 
 Copia los valores de lectura a las variables asignadas a la salida.
 
@@ -69,7 +72,7 @@ Y lee/se posiciona en el siguiente registro. Cuando identifique el final del arc
 
 ![](http://i.imgur.com/Q1bnE8U.png)
 
-Por último el párrafo 300-FIN cierra las conexiones y termina el programa.
+Por último el párrafo **300-FIN** cierra las conexiones y termina el programa.
 
 Este es el resultado de su ejecución:
 
