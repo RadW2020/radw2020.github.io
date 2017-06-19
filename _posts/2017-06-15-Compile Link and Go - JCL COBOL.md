@@ -8,7 +8,7 @@ title: Compile Link and Go JCL COBOL
 no tiene ni logotipo. Igual que [COBOL](https://es.wikipedia.org/wiki/COBOL).
  Así son ellos. 
 No necesitan de frontends ni modernuras atractivas para llamar la atención. 
-No lo necesitan. Están ahí, ocupando su merecido espacio en la industria de 
+Están ahí ocupando su merecido espacio en la industria de 
 la información, y ningun hype-stack les va a mojar la oreja por mucho tiempo. 
 
 Pero si voy a poner una foto de los nuevos mainframes de IBM, porque están MUY chulos.
@@ -17,7 +17,7 @@ Pero si voy a poner una foto de los nuevos mainframes de IBM, porque están MUY 
 
 :D
 
-Este minitutorial explica de que manera se puede compilar y ejecutar 
+Este minitutorial explica de qué manera se puede compilar y ejecutar 
 un código fuente COBOL en un mainframe de IBM con zOS 110, usando ISPF.
 Lo que se conoce en el argot anglosajón como COMPILE LINK AND GO.
 
@@ -40,13 +40,14 @@ Podemos ver su información usando la barra como comando y después usando la op
 
 ![](http://i.imgur.com/JmL40gd.png)
 
-Todos los datasets relacionados con COBOL tienen record length de 80. Aunque el que va a 
-alojar los archivos fuente me ha quedado algo pequeño con solo 5 espacios. 
+Todos los datasets relacionados con COBOL tienen record length de 80. 
+
+El PDS que va a alojar los archivos fuente me ha quedado algo pequeño con solo 5 espacios. 
 El resto me he curado en salud y los he puesto a 100.
 
 ![](http://i.imgur.com/JrqAgq8.png)
 
-Información del PDS que guarda los scripts jcl. 
+Información del PDS que guarda los scripts JCL. 
 
 ![](http://i.imgur.com/3ACEwY9.png)
 
@@ -57,7 +58,7 @@ El programa COBOL que vamos a compilar es un algoritmo simple que calcula si un 
 es bisiesto en un intervalo dado.
 
 El código se puede encontrar 
-[AQUI](https://gist.github.com/RadW2020/c87ef711bdbd03e2544e43bf6776542d)
+[ENLACE A CODIGO](https://gist.github.com/RadW2020/c87ef711bdbd03e2544e43bf6776542d)
  
 Aunque un profesional de verdad jamas usaría github teniendo ISPF :p
  
@@ -74,7 +75,7 @@ Tener un JCL bien formado y un entorno de trabajo funcional no es tarea sencilla
 si eres nuevo en este campo, por mucho linux que tengas a la espalda.
 
 Este es el código JCL usado para la ejecución del ejercicio 
-[JCl-JOB](https://gist.github.com/RadW2020/ab963b92f97e2e8c58ba2290179596c5)
+[ENLACE CODIGO JCL-JOB](https://gist.github.com/RadW2020/ab963b92f97e2e8c58ba2290179596c5)
 
 Y su implementación en ISPF.
 
@@ -107,7 +108,8 @@ Aquí el resultado de la ejecución correcta.
 ![](http://i.imgur.com/MzfaoGu.png)
 
 Me he saltado las horas de búsqueda de errores y documentación que he necesitado 
-para ver funcionar el programa. Mi aliciente es saber que casi todos eran errores triviales
+para ver funcionar el programa. Como aliciente a los que probéis a hacer pruebas en HOST
+ es saber que casi todos los errores errores que salen a la palestra son triviales
 tipo formateo del código fuente, características de los datasets, librerías que ahora
 tienen otro nombre, y cosas del estilo. 
 Nada que no se pueda dominar con un poco de práctica ;)
