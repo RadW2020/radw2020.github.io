@@ -21,13 +21,14 @@ crearemos un fichero que será el resultado de unir sus registros de manera orde
 
 Los ordenamos en un proceso muy similar al mostrado en un 
 [ANTERIOR POST](https://radw2020.github.io/2017/06/17/JCL-SORT-en-HOST/).
-Podemos crear un job ocn un paso, y ejecutarlo dos veces cambiando el SORTIN y el SORTOUT. O podemos
+Podemos crear un job con un paso, y ejecutarlo dos veces cambiando el SORTIN y el SORTOUT. O podemos
 crear un job con dos pasos y ordenar los dos archivos de una tacada.
-En este caso van a ser archivos secuenciales, aunque también podrían ser miembros de un fichero secuenciales
+
+En este caso van a ser archivos secuenciales, aunque también podrían ser miembros 
+de un fichero particionado (biblioteca)
 como en el ejemplo del enlace anterior.
 
 Después de ordenar únicamente por su índice de dos números de manera ascendente, tenemos:
-
 
 
 ![](http://i.imgur.com/SHBo9aT.png)
@@ -35,52 +36,58 @@ Después de ordenar únicamente por su índice de dos números de manera ascende
 
 ![](http://i.imgur.com/TVHHYcT.png)
 
-La estructura de las direcciones school queda tal que así:
+La estructura de las direcciones SCHOOL queda tal que así:
 
 ![](http://i.imgur.com/Yqr4Zf4.png)
 
 Una vez tenemos nuestros archivos ordenados, podemos empezar a codificar el programa COBOL.
-El programa va a leer de dos archivos, que tienen una estructura similar. Registro a registro 
+El programa va a leer de dos archivos, que tienen una estructura similar. 
+
+Registro a registro 
 los va a comparar y a ir escribiendo en el archivo de salida de manera ordenada. 
 
 # ENVIRONMENT DIVISION
 
 ![](http://i.imgur.com/5iZEaDr.png)
 
-En el input output section se va a asignar las dos entradas, estos nombres ENTRADA1,
+En el INPUT-OUTPUT SECTION se va a asignar las dos entradas, estos nombres ENTRADA1,
 ENTRADA2, y SALIDA deberán coincidir con los nombres que pongamos en el JCL de ejecución
 de nuestro programa compilado.
-Por lo pronto a nivel de COBOL ya podemos trabjar sobre IN-FILE1, IN-FILE2 y OUT-FILE.
+
+Por lo pronto a nivel de COBOL ya podemos trabajar sobre IN-FILE1, IN-FILE2 y OUT-FILE.
 
 # DATA DIVISION
 
-Aquí podemos definir los los FD de nuestros archivos.
+Aquí podemos definir los FD de nuestros archivos.
 En este paso asignamos el formato de registro que tendrá cada linea que leamos. En este
 caso CIUDADES y PAISES.
 
 ![](http://i.imgur.com/h8osAZ3.png)
 
 Los registros del archivo de salida también deberán ser definidos en este punto.
-En este ejemplo los tres archivos tienen una estructura similar para no despistar. 
-El nombre elegido para la variable conetnedora es CROSS-OUT.
+En este ejemplo los tres archivos tienen una estructura similar para no despistar 
+(la estructura se define en la creación de los archivos en ISPF y JCL, en COBOL 
+solo se informa de lo que se va a encontrar).
+
+El nombre elegido para la variable contenedora es CROSS-OUT.
 
 ![](http://i.imgur.com/UZPImlr.png)
 
 En los tres casos usaremos las variables de nivel 05 para mover datos en el proceso
-COBOL y las variables de nivel 01 para escribir la salida.
+COBOL y las variables de nivel 01 para lectura y escritura e las conexiones.
 
-En la WORKING STORAGE SECTION se definen las tres variables que contendrán 
-los file status de las conexiones con los archivos. Y una variable WS-EOF para 
-controlar el fin de fila.
+En la **WORKING STORAGE SECTION** se definen las tres variables que contendrán 
+los file status de las conexiones con los archivos. 
 
-En este ejemplo hay que prestar atención por que su diseño es determinante para 
+Y una variable WS-EOF para controlar el fin de fichero.
+En este ejemplo hay que prestarle atención por que su diseño es determinante para 
 el algoritmo que vamos a implementar. 
 
 ![](http://i.imgur.com/pFZqcgl.png)
 
 Es un alfanumérico de dos caracteres que usaremos
 como booleano para determinar los cuatro estados posibles:
- - los dos archivos están sin terminar de leer 'NN'
+ - Los dos archivos están sin terminar de leer 'NN'
  - El primer archivo ha terminado de leer 'SN'
  - El segundo archivo ha terminado de leer 'NS'
  - Los dos archivos han terminado 'SS' 	 
@@ -97,23 +104,26 @@ En el procedure division tenemos tres PERFORM principales
 
 ![](http://i.imgur.com/MJxHZsZ.png)
 
-Párrafo inicio
+Párrafo **100-INICIO**
 
 ![](http://i.imgur.com/VUK3k8D.png)
 
-Nótese que las lecturas a los ficheros están implementadas en párrafos. 
-Al final de este párrafo se hace una lectura anticipada para evitar 
+Nótese que las lecturas a los ficheros están implementadas en párrafos también. 
+Al final de 100-INICIO se hace una lectura anticipada para evitar 
 la entrada de un registro en blanco según tenemos implementado el flujo
-general del proceso.
+general en  200-PROCESO.
 
 ![](http://i.imgur.com/L7oKMbI.png)
 
 También tienen párrafos independientes la escritura de datos en la salida. 
 Uno para escribir la lectura del archivo1 y otro para el archivo2.
 
-![](http://i.imgur.com/jWPpUE7.png)
+Párrafo **200-PROCESO**
 
-Hace uso de WS-EOF para evaluar y elegir una opción. 
+![](http://i.imgur.com/clwNd5U.png)
+
+
+Evalua WS-EOF y elige una opción. 
 
 Para el caso 'NN' es sencillo,
 compara, y el que sea menor es el que se escribe en la salida y se lee de nuevo de su
@@ -131,14 +141,14 @@ explícita más didáctica y simple para mí.
 
 ![](http://i.imgur.com/t3AZC3h.png)
 
-Por último el párrafo 300-FIN.
+Por último el párrafo **300-FIN**
 
 
-El JCL de COMOILACIÓN y ENLACE usado es este. En este punto no nos importa
+El JCL de COMPILACIÓN y ENLACE usado es este. _En este punto no nos importa
 entradas ni salidas. Solo la compilación. Hay muchos errores que pueden venir después, 
 en la ejecución, y que necesitarán que se compile de nuevo en este paso
 después de modificar el código en COBOL para
-resolverlos.
+resolverlos._
 ~~~
 //IBMUSERC JOB NOTIFY=&SYSUID,MSGCLASS=X,MSGLEVEL=(1,1)           
 //*JOBLIB   DD DSN=SCHOOL.COBOL.LOAD,DISP=SHR                     
@@ -187,9 +197,9 @@ resolverlos.
 ~~~
 
 
-El JCL de EJECUCIÓN. Véase que las entradas son los archivos secuenciales 
-ordenados usando un sort simple. Y para la salida he elegido un miembro de
-un dataset CRUCE.
+El JCL de EJECUCIÓN. _Véase que las entradas son los archivos secuenciales 
+ordenados usando un sort simple. Para la salida he elegido que sea un miembro de
+un dataset._
 ~~~
 //IBMUSERG JOB MSGCLASS=X,MSGLEVEL=(1,1),            
 // NOTIFY=&SYSUID                                    
@@ -218,6 +228,7 @@ un dataset CRUCE.
 El resultado final debería ser algo como esto:
 
 ![](http://i.imgur.com/5QIgZwe.png)
+
 
 
 Saludos coboleros:D
