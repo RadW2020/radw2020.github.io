@@ -8,14 +8,16 @@ el resultado de sus operaciones en un archivo de salida.
 
 El archivo a usar es el generado después del SORT, visto en el anterior post.
 
+![](http://i.imgur.com/m6cPOwE.png)
 Cada registro tiene dos campos, el número y el nombre del pais. Vamos darle la vuelta
 poniendo el número a la derecha del nombre.
+
+## ENVIRONMENT DIVISION
 
 ![](http://i.imgur.com/mUBoRHt.png)
 
 El encabezado del programa es trivial. Así que prestemos atención al ENVIRONMENT DIVISION.
 
-## ENVIRONMENT DIVISION
 
 **Importante recordar que hay muchas maneras diseñar este código obteniendo el mismo resultado.
 Esta es una de ellas**
