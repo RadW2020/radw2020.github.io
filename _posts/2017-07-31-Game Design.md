@@ -24,7 +24,8 @@ al pie de la letra por el equipo de arte y desarrollo. Puede iterar, y evolucion
 cambio va a resultar en pérdida de tiempo y por lo tanto de dinero) pero siempre actualizada
 y contrastada.
 
-Esta documentación se llama formalmente **DDJ** (Documento de Diseño del Juego), o en inglés **GDD** (Game Desgin document).
+Esta documentación se llama formalmente **DDJ** (Documento de Diseño del Juego), 
+o en inglés **GDD** (Game Desgin Document).
 
 Si tenemos una idea de juego atractiva y queremos comunicarla lo primero es generar una buena documentación 
 que le de estructura. Para ello se propone el **DDJ-a-una-pagina**, a modo de resumen. No podemos aburrir con nuestra cháchara interminable
@@ -33,12 +34,13 @@ sobre lo estupendo que es esto o aquello sin saber cuando va a terminar la expli
 
 ![](https://store-images.s-microsoft.com/image/apps.15135.9007199266371183.840ef483-9aaf-4d15-90c1-6ba6268dd2c9.6bdb4f9a-61e4-4f00-abb2-4ac532c4fba8?w=471&h=265&q=60)
 
-Ya sea en horizontal o en vertical, y siempre con algunos dibujos y 
+Ya sea en horizontal o en vertical, siempre con algunos dibujos y 
 tipos de letra para los títulos adecuados que vayan generando el ambiente del juego.
+
 Este sería una posible guía:
 
 
-> ## DDJ - una página
+## DDJ - una página
 >- Título
 >- Plataforma Objetivo
 >- Edad del Target
@@ -62,7 +64,7 @@ viñetas de comics, un video o animación, collages. Todo vale si ayuda a transm
 Esta podría ser una guía de lo que debe contener un DDJ de diez páginas.
 
 
-> ## DDJ - diez páginas
+## DDJ - diez páginas
 > #### PAGINA 1: Título
 >>-	Título con fuentes de letra sugerentes
 >>-	Plataformas objetivo
