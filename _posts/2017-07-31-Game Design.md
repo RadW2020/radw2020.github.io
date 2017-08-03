@@ -66,45 +66,45 @@ Esta podría ser una guía de lo que debe contener un DDJ de diez páginas.
 
 ## DDJ - diez páginas
 > #### PAGINA 1: Título
->>-	Título con fuentes de letra sugerentes
->>-	Plataformas objetivo
->>-	Edad del Target
->>-	Rating ESRB
->>-	Tiempo de ejecución
+>-	Título con fuentes de letra sugerentes
+>-	Plataformas objetivo
+>-	Edad del Target
+>-	Rating ESRB
+>-	Tiempo de ejecución
 > #### PAGINA 2: Presentación del Juego
->>-	Resumen de la historia del juego (comienzo-nudo-desenlace) (un par o tres párrafos)
->>-	Directrices del Juego (PJ, cámara, estilo de juego, ambiente, objetivos, enemigos, fases y todo lo que pueda describir para entender el juego y la experiencia a tener) 
+>-	Resumen de la historia del juego (comienzo-nudo-desenlace) (un par o tres párrafos)
+>-	Directrices del Juego (PJ, cámara, estilo de juego, ambiente, objetivos, enemigos, fases y todo lo que pueda describir para entender el juego y la experiencia a tener) 
 > #### PAGINA 3: El Jugador
->>-	Descripción del Heroe que se va a jugar, o de la nave a pilotar etc
->>-	Qué habilidades tiene. Arte conceptual. Que historia tiene detrás. Armas.
->>-	Mapeado básico de control usando un mando de juego, como si fuera el manual de uso. O de la interfaz de interactividad si fuera un móvil o Tablet.
+>-	Descripción del Heroe que se va a jugar, o de la nave a pilotar etc
+>-	Qué habilidades tiene. Arte conceptual. Que historia tiene detrás. Armas.
+>-	Mapeado básico de control usando un mando de juego, como si fuera el manual de uso. O de la interfaz de interactividad si fuera un móvil o Tablet.
 > #### PAGINA 4: Jugabilidad
->>-	Como se aplica el estilo de juego. Secuencia de juego. Secuencia de experiencia.
->>-	Exponer aquí los puntos fuertes del DDJ de una página.
->>-	Describir minijuegos y mecánicas. Usar diagramas. 
->>-	Enumerar detalles relativos a la plataforma a la que va destinada, multiplayer, uso de internet, servidores, compras en aplicación y cualquier cosa necesaria para entender el alcance de la complejidad del proyecto.
+>-	Como se aplica el estilo de juego. Secuencia de juego. Secuencia de experiencia.
+>-	Exponer aquí los puntos fuertes del DDJ de una página.
+>-	Describir minijuegos y mecánicas. Usar diagramas. 
+>-	Enumerar detalles relativos a la plataforma a la que va destinada, multiplayer, uso de internet, servidores, compras en aplicación y cualquier cosa necesaria para entender el alcance de la complejidad del proyecto.
 > #### PAGINA 5: Mundo del Juego
->>-	El mundo en el que se desarrolla, y sus subambientes. Descripciones cortas.
->>-	Qué hay en cada lugar para el PJ, que personalidad tiene cada sitio, que música lo va a ambientar. Como están conectadas las localizaciones entre si.
->>-	Incluir algún mapa o diagrama de flujo para entender como el PJ se mueve por el mundo.
+>-	El mundo en el que se desarrolla, y sus subambientes. Descripciones cortas.
+>-	Qué hay en cada lugar para el PJ, que personalidad tiene cada sitio, que música lo va a ambientar. Como están conectadas las localizaciones entre si.
+>-	Incluir algún mapa o diagrama de flujo para entender como el PJ se mueve por el mundo.
 > #### PAGINA 6: Experiencia de Juego
->>-	Todo lo que sirva para describir las sensaciones que debe producir el juego.
->>-	Qué se ve primero en el juego. Que emociones debe suscitar el juego al completo.
->>-	Como la música o el sonido acompaña estas emociones.
->>-	Qué otros mecanismos hay que definan la experiencia que se busca.
->>-	Diagrama de flujo de uso de navegación de la interfaz.
+>-	Todo lo que sirva para describir las sensaciones que debe producir el juego.
+>-	Qué se ve primero en el juego. Que emociones debe suscitar el juego al completo.
+>-	Como la música o el sonido acompaña estas emociones.
+>-	Qué otros mecanismos hay que definan la experiencia que se busca.
+>-	Diagrama de flujo de uso de navegación de la interfaz.
 > #### PAGINA 7: Mecánicas de Juego
->>-	Qué mecánicas debe seguir el jugador para avanzar en el juego.
->>-	Qué peligros o retos debe superar.
->>-	Qué power-ups va a encontrar disponibles y como afectan.
->>-	Qué cosas puede coleccionar. Qué sistema de economía/compras sigue la mecánica si tiene alguno.
+>-	Qué mecánicas debe seguir el jugador para avanzar en el juego.
+>-	Qué peligros o retos debe superar.
+>-	Qué power-ups va a encontrar disponibles y como afectan.
+>-	Qué cosas puede coleccionar. Qué sistema de economía/compras sigue la mecánica si tiene alguno.
 > #### PAGINA 8: Enemigos
->>-	Mecánicas de los jefes de fase o encuentros diferenciadores.
->>-	Qué enemigos o peligros se encuentra el jugador y como le afecta que los pase o que le derrote.
+>-	Mecánicas de los jefes de fase o encuentros diferenciadores.
+>-	Qué enemigos o peligros se encuentra el jugador y como le afecta que los pase o que le derrote.
 > #### PAGINA 9: Animaciones
->>-	Videos, presentaciones, intro, fin de juego, animaciones intermedias, y su estilo
+>-	Videos, presentaciones, intro, fin de juego, animaciones intermedias, y su estilo
 > #### PAGINA 10: Material Extra
->>-	Posible material descargable, extras en multiplayer, contenido persistente.
+>-	Posible material descargable, extras en multiplayer, contenido persistente.
 
 
 
