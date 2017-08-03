@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Diseño de Videojuegos
+title: Diseno de Videojuegos
 ---
  
 
