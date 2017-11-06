@@ -21,7 +21,7 @@ La madre y el padre estaban postrados sobre el cuerpo inmóvil de su hija. Ella,
 
 \- Pero no podemos dejar de llorarla, porque en ese momento se habrá ido para siempre- dijeron a la vez. La unión de sus voces alteró todo a su alrededor. Lo que parecía la sala principal de un palacio de piedra con altas columnas y grandes ventanales se empezó a transformar en una selva frondosa y rebosante. Las tres figuras yacían en el centro de un claro colmado de hermosura, como si la vegetación se hubiese preparado durante cientos de años para acoger aquel encuentro. 
 
-Un enorme pájaro llegó planeando con modo solemne. Parecía un guacamayo pero el habitual colorido se ocultaba bajo un adusto blanco y negro. La imponente ave contempló la escena y se irguió y habló alzando todo su plumaje.
+Un enorme pájaro llegó planeando de modo solemne. Parecía un guacamayo pero el habitual colorido se ocultaba bajo un adusto blanco y negro. La imponente ave contempló la escena y se irguió y habló alzando todo su plumaje.
 
 \- Mis amados señores Endof y Tandi. Queda poco tiempo y por ello quiero que me disculpen pues seré más breve en mi parlamento de lo que me gustaría.  Hablo en nombre de todas las criaturas de Tarshish cuando digo que no queremos resignarnos a ver como su hija desaparece, y con ella el futuro de nuestra existencia. El mayor poder que tienen los humanos no es del todo suyo, ha bebido de nuestras fuentes y ríos que se acabaron secando ante su indolencia.
 
@@ -31,7 +31,7 @@ Sus palabras subían de intensidad, extendía las alas y las agitaba con orgullo
 
 Mientras terminaba de hablar, una pluma de su cola había volado caprichosa y se hallaba cerca del rostro de la princesa.
 
-La madre tomó la pluma, miró a su esposo y señor, creador, y este, mas por vergüenza que por esperanza, derramó una lágrima que al caer sobre la pluma se convirtió en una luciérnaga. Tandi habló por última vez:
+La madre tomó la pluma, miró a su esposo y señor, creador, y éste, más por vergüenza que por esperanza, derramó una lágrima que al caer sobre la pluma se convirtió en una luciérnaga. Tandi habló por última vez:
 
 \- Lleva contigo esta portadora de luz, llévala a ese sitio del que hablas, si aún hay esperanza para nosotros, se iluminará y volverá para colmarnos de dicha. Nos renovará de maná y nuestra hija vivirá para reinar Tarshish largo tiempo.
 
