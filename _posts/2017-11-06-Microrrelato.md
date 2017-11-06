@@ -31,7 +31,7 @@ Sus palabras subían de intensidad, extendía las alas y las agitaba con orgullo
 
 Mientras terminaba de hablar, una pluma de su cola había volado caprichosa y se hallaba cerca del rostro de la princesa.
 
-La madre tomó la pluma, miró a su esposo y señor, creador, y éste, más por vergüenza que por esperanza, derramó una lágrima que al caer sobre la pluma se convirtió en una luciérnaga. Tandi habló por última vez:
+La madre tomó la pluma, miró a su esposo, y éste, más por vergüenza que por esperanza, derramó una lágrima que al caer sobre la pluma se convirtió en una luciérnaga. Tandi habló por última vez:
 
 \- Lleva contigo esta portadora de luz, llévala a ese sitio del que hablas, si aún hay esperanza para nosotros, se iluminará y volverá para colmarnos de dicha. Nos renovará de maná y nuestra hija vivirá para reinar Tarshish largo tiempo.
 
