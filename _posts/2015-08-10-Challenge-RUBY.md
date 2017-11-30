@@ -16,7 +16,7 @@ La idea era hacer una liga que durara varios meses, donde pudiéramos enfrentar 
 
 Hemos estado usando la librería [RTanque](https://github.com/awilliams/RTanque). Librería que ya se había usado en otras ocasiones para competiciones en alguna universidad.
 
-<a href=""><img src="http://awilliams.github.io/images/rtanque.png" align="top" height="150" ></a>
+<a href=""><img src="https://awilliams.github.io/images/rtanque.png" align="top" height="150" ></a>
 
 La evolución de mi código fue muy emocionante, y las batallas también. Pasé de tener un tanque que chocaba contra las paredes girando 90º, con un porcentaje de acierto del 0%, a implementar unas aproximaciones de Newton para anticipar la posición del enemigo y, maximizar los aciertos en los disparos. También implementé un patrón de movimiento por una matriz de puntos de diferentes densidades, con un movimiento base de tipo sinusoidal y giros bruscos aleatorios.
 
