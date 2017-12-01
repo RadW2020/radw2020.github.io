@@ -27,7 +27,7 @@ Seguimos los pasos poniendo un nombre a la aplicación
 En los pasos previos descritos en la web de HacklabAl, instalamos la interfaz de linea de comandos de Cloud Foundry y la de Bluemix.
 Podemos saltar este paso.
 Nosotros vamos a usar el ejemplo sobre twitter, así que podemos obviar la descarga del código inicial. Aunque también le podemos echar un vistazo ya que es un ejemplo sencillo con "Hola mundo" y siempre es instructivo.
-![](http://i68.tinypic.com/1g0vbr.png)
+![](https://i.imgur.com/HRW4EZP.png)
 
 Seguimos las pasos 5 y 6 tal y como nos aparezca para ver que no hay problemas con las conexiones.
 ![](https://i.imgur.com/bliGXfC.png)
