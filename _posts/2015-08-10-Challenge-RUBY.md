@@ -9,7 +9,7 @@ Este año 2015 ha sido mi año para Ruby. Después de empaparme de recursos onli
 
 Encontré, a principios de año, un challenge de programación de IAs en Ruby organizado por la escuela/bootcamp Ironhack para desarrolladores.
 
-<a href="https://www.ironhack.com/en"><img src="https://pbs.twimg.com/profile_images/466256995675160576/4L9u4Au_.png" align="top" height="100" ></a>
+<a href="https://www.ironhack.com/en"><img src="https://pbs.twimg.com/profile_images/922856272332054528/UB_AjsnV.jpg" align="top" height="100" ></a>
 
 
 La idea era hacer una liga que durara varios meses, donde pudiéramos enfrentar nuestro código e ir viendo los resultados para hacer mejoras cada quince días.
