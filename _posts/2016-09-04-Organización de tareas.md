@@ -24,33 +24,32 @@ Es muy versátil y fácil. Puedes configurar tus tableros como quieras, puede va
 
 
 
-## [Toodledo](https://www.toodledo.com/)
-![](https://i.imgur.com/EI1BBds.png)
+
+![https://www.toodledo.com/](https://i.imgur.com/EI1BBds.png)
 
 Para quien le guste las TO-DO lists esta es una opción que merece la pena probar. Es un gestor de todo lists hipervitaminado y muy configurable.
 
-## [Restyadoard](http://restya.com/)
-![](https://i.imgur.com/DfAysDU.png)
+
+![http://restya.com/](https://i.imgur.com/DfAysDU.png)
 
 Es una alternativa a Trello en Open Source.
 
-## [Jira](https://es.atlassian.com/software/jira)
-![](https://i.imgur.com/hxQhiKe.png)
+
+![https://es.atlassian.com/software/jira](https://i.imgur.com/hxQhiKe.png)
 
 Jira tiene una legión de incondicionales. El acabado las aplicaciones de Atlassian convence a muchos profesionales. Merece la pena probar la versión Demo para comprobar hasta donde sube el listón este servicio de pago.
 
-## [Phabricator](https://www.phacility.com/)
-![](https://i.imgur.com/gZeg9q2.png)
+
+![https://www.phacility.com/](https://i.imgur.com/gZeg9q2.png)
 
 Gestión de proyectos simple y directa. Fue inicialmente creada por Facebook y después liberada.
 
-## [Openproject](https://www.openproject.org/)
-![](https://www.openproject.org/wp-content/uploads/sites/7/2015/04/logo_openproject_foundation-300x119.png)
+
+![https://www.openproject.org/](https://www.openproject.org/wp-content/uploads/sites/7/2015/04/logo_openproject_foundation-300x119.png)
 
 Otra herramienta de código libre para la gestión de proyectos. Los amantes del open source seguro le echarán un buen vistazo.
 
 
-## [Kanbantool](https://kanbantool.com/es/)
-![](https://static2.financesonline.com/uploads/2015/05/kanbanth-220x90.png)
+![https://kanbantool.com/es/](https://static2.financesonline.com/uploads/2015/05/kanbanth-220x90.png)
 
 Como su propio nombre indica, esta app es digna de atención para aquellos equipos que trabajen con el método kanban.
