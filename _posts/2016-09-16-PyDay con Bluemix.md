@@ -5,7 +5,7 @@ title: PyDay con Bluemix
 
 Hoy he participado en un taller organizado por Hacklab Almería e IBM sobre Watson y Bluemix.
 
-![](http://dii.ufv.es/wp-content/uploads/2016/02/ibm-bluemix.png)
+![](https://i.imgur.com/ddkwHng.png)
 
 El objetivo era montar una aplicación Python en los servidores de Bluemix, que haga uso de los servicios de la IA Watson para analizar el tono emocional de los mensajes de twitter de las cuentas que queramos.
 
@@ -13,7 +13,7 @@ En la [página del evento](http://hacklabalmeria.net/actividades/2016/09/15/tall
 
 Creamos una app en nuestro panel de control de Bluemix.
 
-![](http://i66.tinypic.com/i2io1g.png)
+![](https://i.imgur.com/VcwcIJN.png)
 
 Tipo Web
 ![](http://i64.tinypic.com/2pqizgx.png)

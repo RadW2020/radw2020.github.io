@@ -7,21 +7,17 @@ title: Organización de Proyectos
 
 A continuación expongo una serie de herramientas online que facilitan la tarea de Gestión de Proyectos, ya sea de manera colaborativa y distribuida, como para un equipo en local o un solo desarrollador.
 
-## [Taiga][b4bb795c]
 
-  [b4bb795c]: https://taiga.io/ "Taiga"
 
 ![](https://d1us95wkqce0jo.cloudfront.net/site/company/logo/22675_423375.jpg)
 
 Por ahora la opción predilecta por muchos, y la mía. Está enfocado para desarrolladores que usen métodos ágiles, diseñadores y project managers en general. Tiene una gran variedad de funcionalidades y está fuertemente enfocado al sector profesional.
 
-## [Trello](https://trello.com/)
 
 ![](https://www.easy-insight.com/images/trello.png)
 
 Esta aplicación es como un lienzo en blanco, y nunca mejor dicho. Inicialmente parece muy simple y poco especializada, pero  ahí radica su punto fuerte.
 Es muy versátil y fácil. Puedes configurar tus tableros como quieras, puede valer para organizar proyectos, empresas, equipos, incluso para la vida personal.
-
 
 
 
