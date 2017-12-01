@@ -3,7 +3,7 @@ layout: post
 title: Organización de Proyectos
 ---
 
-![](http://www.ledfish.com/wp-content/uploads/2010/07/organizacion-de-proyectos-intro1.jpg)
+![](https://i.imgur.com/Fp5uv89.png)
 
 A continuación expongo una serie de herramientas online que facilitan la tarea de Gestión de Proyectos, ya sea de manera colaborativa y distribuida, como para un equipo en local o un solo desarrollador.
 
@@ -25,22 +25,22 @@ Es muy versátil y fácil. Puedes configurar tus tableros como quieras, puede va
 
 
 ## [Toodledo](https://www.toodledo.com/)
-![](http://static.toodledo.com/libs/images/logo-dark.png)
+![](https://i.imgur.com/EI1BBds.png)
 
 Para quien le guste las TO-DO lists esta es una opción que merece la pena probar. Es un gestor de todo lists hipervitaminado y muy configurable.
 
 ## [Restyadoard](http://restya.com/)
-![](http://restya.com/images/logo.png)
+![](https://i.imgur.com/DfAysDU.png)
 
 Es una alternativa a Trello en Open Source.
 
 ## [Jira](https://es.atlassian.com/software/jira)
-![](http://astah.net/features/atlassian/jira-logo.png)
+![](https://i.imgur.com/hxQhiKe.png)
 
 Jira tiene una legión de incondicionales. El acabado las aplicaciones de Atlassian convence a muchos profesionales. Merece la pena probar la versión Demo para comprobar hasta donde sube el listón este servicio de pago.
 
 ## [Phabricator](https://www.phacility.com/)
-![](http://povilasb.com/_images/phabricator_logo.png)
+![](https://i.imgur.com/gZeg9q2.png)
 
 Gestión de proyectos simple y directa. Fue inicialmente creada por Facebook y después liberada.
 
