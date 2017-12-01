@@ -7,7 +7,7 @@ Este post es una revisión al pasado reciente, como muchos otros que vendrán pr
 
 Estoy recordando mi experiencia en la GameJam de Almería en Mayo de este año, y he pensado que se merece un post-remember :)
 
-![](http://www.jamtodayalmeria.com/wp-content/uploads/2016/04/logo1.jpg)
+![](https://i.imgur.com/4Mm9ccE.png)
 
 Durante los días 27, 28 y 29 de Mayo se llevó a cabo la [JAMTODAY ALMERIA](http://www.jamtodayalmeria.com/).
 48 horas para crear un videojuego.
