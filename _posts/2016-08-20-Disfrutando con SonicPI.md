@@ -6,7 +6,7 @@ title: Disfrutando con SonicPI
 Esta aplicación merece un post para ella sola.
 Voy a hacer una pasada superficial porque el proyecto ha evolucionado tanto que es bastante amplio.
 ## [SonicPi](http://sonic-pi.net/)
-![](http://www.tecoed.co.uk/uploads/1/4/2/4/14249012/8963862_orig.png)
+![](https://i.imgur.com/uqhmqf2.png)
 
 La idea inicial es crear una aplicación para crear música programando. Esto no es totalmente nuevo, pero lo que si es nuevo es com ha conseguido llevarla a cabo, de una manera tan efectiva y atractiva.
 
