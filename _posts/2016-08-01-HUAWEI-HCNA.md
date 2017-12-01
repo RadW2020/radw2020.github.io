@@ -18,7 +18,7 @@ Este hardware tiene un elevado nivel de desarrollo técnico, y trata de hacer
 uso de las técnicas mas modernas para la gestión y aprovechamiento de
 los recursos que proporcionan sus productos. Como por ejemplo los servidores [OceanStor 9000.](https://www.youtube.com/watch?v=HAGELUHssoQ)
 
-<a href="url"><img src="http://image.slidesharecdn.com/huawei-131217172258-phpapp01/95/huawei-hpc-solutions-13-638.jpg?cb=1387358676" align="top" height="190" ></a>
+<a href="url"><img src="https://image.slidesharecdn.com/huawei-131217172258-phpapp01/95/huawei-hpc-solutions-13-638.jpg?cb=1387358676" align="top" height="190" ></a>
 
 El curso se llama **Cátedra Uned-Huawei de Cloud Computing y Big Data** y está destinado preparar la certificiación [HCNA-BCCP ](http://support.huawei.com/learning/news!toNewsInfo?newsId=Node1000007643&lang=en) (Huawei Certified Network Associate-Building Cloud Computing Platform),
 
