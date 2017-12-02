@@ -91,26 +91,26 @@ Este es el resultado de hacer click sobre el botón tres veces.
 
 Comprobamos la lista de procesos en el sistema con tasklist en la linea de comandos
 
-![](http://i67.tinypic.com/2lj0xz6.jpg)
+![](https://i.imgur.com/eDZuPwu.jpg)
 
 Podemos identificar los PID de los procesos en cuestion. Tenemos el de netbeans identificado por su nombre, y después cuatro procesos java, uno del lanzador y tres de los lanzados.
 
-![](http://i63.tinypic.com/2w4l893.jpg)
+![](https://i.imgur.com/rB1JCTR.jpg)
 
 Si lo deseamos podemos terminar con un proceso con el comando taskkill /PID numDeProces
 
-![](http://i65.tinypic.com/2agoe8.jpg)
+![](https://i.imgur.com/R3v150d.jpg)
 
 Este es el resultado después de matar un proceso
 
-![](http://i67.tinypic.com/10pzll4.jpg)
+![](https://i.imgur.com/B4oAoty.jpg)
 
 También podemos cerrar un proceso desde el administrador de tareas de Windows
 
-![](http://i63.tinypic.com/win9f.jpg)
+![](https://i.imgur.com/MohbM7s.jpg)
 
 Ya solo nos queda uno. Que también se puede cerrar como si fuera una ventana gracias al interfáz gráfico que hemos obtenido con swing.
 
-![](http://i65.tinypic.com/20sw48w.jpg)
+![](https://i.imgur.com/Eot9Zzj.jpg)
 
 Saludos!

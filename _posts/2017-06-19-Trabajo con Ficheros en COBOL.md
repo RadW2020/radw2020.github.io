@@ -8,13 +8,13 @@ el resultado de sus operaciones en un archivo de salida.
 
 El archivo a usar es el generado después del SORT, visto en el anterior post.
 
-![](http://i.imgur.com/m6cPOwE.png)
+![](https://i.imgur.com/m6cPOwE.png)
 Cada registro tiene dos campos, el número y el nombre del pais. Vamos darle la vuelta
 poniendo el número a la derecha del nombre.
 
 ## ENVIRONMENT DIVISION
 
-![](http://i.imgur.com/mUBoRHt.png)
+![](https://i.imgur.com/mUBoRHt.png)
 
 El encabezado del programa es trivial. Así que prestemos atención al ENVIRONMENT DIVISION.
 
@@ -44,7 +44,7 @@ coincidir con la longitud del archivo.
 Para la salida hacemos algo similar, salvo el orden invertido de Nombre e ID, que ya nos da una idea 
 de la solución de diseño que hemos elegido.
  
-![](http://i.imgur.com/jNH9wCt.png)
+![](https://i.imgur.com/jNH9wCt.png)
 
 ## PROCEDURE DIVISION
 
@@ -53,7 +53,7 @@ En la WORKING STORAGE SECTION declaramos las variables para almacenar los File S
 
 
  
-![](http://i.imgur.com/kG4E8Pl.png) 
+![](https://i.imgur.com/kG4E8Pl.png) 
 
 WS-EOF tomará el valor S cuando llegemos al final de la lectura del archivo.
 
@@ -67,7 +67,7 @@ Si es así, cambiará el valor de WS-EOF y no se ejecutará 200-PROCESO por la c
 De esta manera nos evitaremos comportamientos extraños como la inserción de un registro extra en blanco en nuestro
 archivo de salida.
 
-![](http://i.imgur.com/Aoo8RjQ.png)
+![](https://i.imgur.com/Aoo8RjQ.png)
 
 Una vez hechas todas las preparaciones previas, el párrafo **200-PROCESO** queda muy simplificado:
 
@@ -77,13 +77,13 @@ Escribe esta salida en el archivo dado.
 
 Y lee/se posiciona en el siguiente registro. Cuando identifique el final del archivo parará su ejecución.
 
-![](http://i.imgur.com/Q1bnE8U.png)
+![](https://i.imgur.com/Q1bnE8U.png)
 
 Por último el párrafo **300-FIN** cierra las conexiones y termina el programa.
 
 Este es el resultado de su ejecución:
 
-![](http://i.imgur.com/eVNVog2.png)
+![](https://i.imgur.com/eVNVog2.png)
 
 :D
 

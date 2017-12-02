@@ -16,7 +16,7 @@ Este paso lo voy a hacer un poco mas exhaustivo para que sirva en futuros ejerci
 
 Primeramente la estructura de direcciones.
 
-![](http://i.imgur.com/jkfgLjr.png)
+![](https://i.imgur.com/jkfgLjr.png)
 
 Y los detalles pormenorizados. 
 
@@ -25,40 +25,40 @@ características del dataset en el que están alojados (si han sido creados dent
 
 COBOL 
 
-![](http://i.imgur.com/KuWS6P1.png)
+![](https://i.imgur.com/KuWS6P1.png)
 
 COPYS
 
-![](http://i.imgur.com/5h1TzR2.png)
+![](https://i.imgur.com/5h1TzR2.png)
 
 LOAD
 
-![](http://i.imgur.com/b0GCfg9.png)
+![](https://i.imgur.com/b0GCfg9.png)
 
 OBJ
 
-![](http://i.imgur.com/WhoET1F.png)
+![](https://i.imgur.com/WhoET1F.png)
 
 DATA
 
-![](http://i.imgur.com/2sSOmqe.png)
+![](https://i.imgur.com/2sSOmqe.png)
 
 JCL
 
-![](http://i.imgur.com/pAH2zhu.png)
+![](https://i.imgur.com/pAH2zhu.png)
 
 Este es el archivo de ejemplo que vamos a ordenar. 
 
 Está creado de manera arbitraria con algunos
 códigos iguales para ver como se comporta en estos casos. 
 
-![](http://i.imgur.com/GRwc49s.png)
+![](https://i.imgur.com/GRwc49s.png)
 
 El JOB que lanza esta operación se compone de dos pasos. Uno que borra el archivo resultante, 
 para el caso de que ya exista, como ocurrirá cuando lanzemos el job mas de una vez. Y el otro que lee, 
 ordena y escribe una salida.
 
-![](http://i.imgur.com/KYop49A.png)
+![](https://i.imgur.com/KYop49A.png)
 
 El paso DELETE ejecuta la herramienta IDCAMS. Esta sirve para realizar operativas sobre ficheros VSAM.
 Con ella podemos por ejemplo crear un archivo, borrarlo, copiarlo o imprimirlo.
@@ -71,7 +71,7 @@ El Card SYSIN sirve para introducir la instrucción que queremos que ejecute IDC
 borrar un fichero dado. Se fuerza la salida MAXCC a cero para evitar que se pare el job dando un error
  si no encuentra el fichero.
 
-![](http://i.imgur.com/jA3oP4O.png)
+![](https://i.imgur.com/jA3oP4O.png)
 
 El paso ORDENA ejecuta la herramienta SORT.
 
@@ -82,7 +82,7 @@ Enviamos la salida de mensajes generados al SPOOL igual que en IDCAMS.
 
 Y por último introducimos los parámetros que queremos aplicar en SYSIN.
 
-![](http://i.imgur.com/jFrMkpZ.png)
+![](https://i.imgur.com/jFrMkpZ.png)
 
 SORT FIELDS tiene en este caso dos instrucciones. 
 
@@ -96,7 +96,7 @@ El resultado de la ejecución lo podemos ver abriendo el archivo creado por SORT
 Vemos como ha ordenado de menos a mayor según el código (siguiendo la primera isntrucción)
 , y de manera ascendente según el texto en el caso de coincidencias, vease los 66.
 
-![](http://i.imgur.com/wn2O1aV.png)
+![](https://i.imgur.com/wn2O1aV.png)
 
 Esto es todo por ahora :)
 

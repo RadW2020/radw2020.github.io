@@ -5,7 +5,7 @@ title: Machine Learning con Java
 
 En la pasada PyconEs en Almería, Cajamar tuvo la gran iniciativa de hacer un Datathon. Esto es, un campeonato sobre machine learning y minería de datos.
 
-![](http://almeria.fape.es/wp-content/uploads/2016/09/PythonHack-1024x449.jpg)
+![](https://i.imgur.com/g2jk4T5.jpg)
 
 En [su web](http://www.cajamardatalab.com/datathon-cajamar-pythonhack-2016/) se puede ver toda la información disponible sobre el reto.
 
@@ -17,7 +17,7 @@ Con tan poco tiempo por delante decidí usar lenguaje Java porque me siento mas 
 
 Mi impresión fue que, tal y como me figuraba, a día de hoy Python se lleva la palma en cuanto a funcionalidades científicas y desarrollo de librerías punteras, como es el caso del Machine Learning.
 
-![](http://www.scipy-lectures.org/_images/scikit-learn-logo.png)
+![](https://i.imgur.com/iFtW0u9.png)
 Realmente mi experiencia general fue la sensación de abrir el gran melón del Big Data. Había tanto que investigar, aprender y mirar que lo que más aprendí fue todo lo que me queda por saber. También hay que aprender a trazar un camino seguro en el aprendizaje, algo que ya de por sí es bastante, y os aseguro que en mi caso va a pasar por [Python/Jupyter](https://ipython.org/) con sus [librerías](http://scikit-learn.org/), [IBM Watson](http://www.ibm.com/watson/), y como no, [Tensorflow](https://www.tensorflow.org/).
 
 Pero volviendo a mi aventura, también hay vida inteligente en Java, no podía ser menos.
@@ -27,11 +27,11 @@ Cuando empieza a entrar en materia veo que hace uso de otra librería que se lla
 
 Después de una pequeña investigación en Google me di cuenta que Weka está referenciada como de lo mejor en Machine Learning en Java, y desde la Universidad se ocupan de mantenerla actualizada.
 No solo eso, Weka es principalmente un programa con su interfaz gráfico totalmente completo para hacer minería de datos e investigaciones científicas con Big Data. Por lo que he visto y usado es muy completa y funciona muy bien.
-![](http://www.ibm.com/developerworks/library/os-weka1/weka-startup1.jpg)
+![](https://i.imgur.com/CWpDKLm.jpg)
 
 Las visualizaciones y la UI no son de lo más actual pero cumplen su función a la perfección
 
-![](http://i1-win.softpedia-static.com/screenshots/Weka_2.png)
+![](https://i.imgur.com/TxgVZh2.png)
 
 El programa está muy documentado y hay libros para sacarle el máximo partido. De hecho, la librería Java que dejan para su uso directamente con código me pareció relegada a un segundo lugar en importancia a nivel de tutoriales y documentación.
 
@@ -44,7 +44,7 @@ Mis resultados no fueron malos, pero me faltó tiempo para terminar el código y
 
 Opté por un modelo [RandomForest](https://es.wikipedia.org/wiki/Random_forest), ya que los datos que tenía eran una mezcla de continuos y discretos, y entre la gran variedad de opciones me pareció la mejor (en esto coincidí con la mayoría de participantes).
 
-![](http://www.iis.ee.ic.ac.uk/icvl/iccv09_tutorial_files/random_forest_new2.png)
+![](https://cdn-images-1.medium.com/max/1600/1*V1gaYbSzecaGE7s6WVIcsQ.png)
 
 
 En el [Cross Validation](https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada) que llevé a cabo los resultados de previsión de predicción del modelo no eran malos: un 0.79 Aunque hay que tener cuidado con el uso de esta herramienta ya que solo es orientativa y hay que tener muy en cuenta la relación de los datasets entre sí.
@@ -64,7 +64,7 @@ En el futuro mis esfuerzos irán de la mano de Python, y algo de R.
 Por último me quedé con ganas de aportar mi granito de arena al proyecto Weka (al final le acabé cogiendo el gusto), y como me gustó esto de encontrar la solución al problema planteado, me quiero hacer una aplicación que genere Datasets con un patrón oculto para seguir entrenando mis habilidades como Data Miner.
 
 La idea es escribir un encabezado de archivo de datos Weka,
-![](http://research.cs.queensu.ca/home/cisc333/tutorial/wekaData.JPG)
+![](https://i.imgur.com/vQQJF8S.jpg)
 
 y que el programa genere tantas filas como queramos siguiendo un patrón generado mediante unas reglas ocultas.
 Lo interesante de esto es generar datasets, de tantas filas o columnas como queramos, con un porcentaje de casos positivos mayor o menor según se quiera, y con los set de entrenamiento, test y resultado listos para hacer las comprobaciones.

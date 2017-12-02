@@ -13,7 +13,7 @@ la información, y ningun hype-stack les va a mojar la oreja por mucho tiempo.
 
 Pero si voy a poner una foto de los nuevos mainframes de IBM, porque están MUY chulos.
 
-![](http://3.bp.blogspot.com/-8IEJ8iNheT8/VLVXdpMQ9kI/AAAAAAAAAxk/dm-I5IWigew/s1600/01-z13-Front.jpg)
+![](https://i.imgur.com/ktJgOqY.jpg)
 
 :D
 
@@ -24,7 +24,7 @@ Lo que se conoce en el argot anglosajón como COMPILE LINK AND GO.
 Por lo pronto esta es la version usada. Cosa importante
  ya que muchas librerías tienen otros nombres dependiendo de la versión.
 
-![](http://i.imgur.com/W9VUXuY.png)
+![](https://i.imgur.com/W9VUXuY.png)
 
 Esta es la estructura de datasets que he usado para realizar este ejercicio. 
 Son todos PDS con su respectivo espacio para alojar miembros.
@@ -34,22 +34,22 @@ Son todos PDS con su respectivo espacio para alojar miembros.
 - COBOL.OBJ para las posibles rutinas
 - COBOL.JCL para los Jobs
 
-![](http://i.imgur.com/jpso8IE.png)
+![](https://i.imgur.com/jpso8IE.png)
 
 Podemos ver su información usando la barra como comando y después usando la opción *info*
 
-![](http://i.imgur.com/JmL40gd.png)
+![](https://i.imgur.com/JmL40gd.png)
 
 Todos los datasets relacionados con COBOL tienen record length de 80. 
 
 El PDS que va a alojar los archivos fuente me ha quedado algo pequeño con solo 5 espacios. 
 El resto me he curado en salud y los he puesto a 100.
 
-![](http://i.imgur.com/JrqAgq8.png)
+![](https://i.imgur.com/JrqAgq8.png)
 
 Información del PDS que guarda los scripts JCL. 
 
-![](http://i.imgur.com/3ACEwY9.png)
+![](https://i.imgur.com/3ACEwY9.png)
 
 Importante si os quedais si espacio en un dataset, lo podeis comprimir mientras 
 pensais que nuevo diseño vais a usar cuando se os llene de nuevo.
@@ -62,7 +62,7 @@ El código se puede encontrar
  
 Aunque un profesional de verdad jamas usaría github teniendo ISPF :p
  
-![](http://i.imgur.com/HgfJOP3.png)
+![](https://i.imgur.com/HgfJOP3.png)
 
 Codificar un programa COBOL, para alguien con experiencia en lenguajes de 
 programación, puede ser relativamente trivial. La complejidad viene dada 
@@ -79,7 +79,7 @@ Este es el código JCL usado para la ejecución del ejercicio
 
 Y su implementación en ISPF.
 
-![](http://i.imgur.com/nEQb7pJ.png)
+![](https://i.imgur.com/nEQb7pJ.png)
 
 Entrar a describir al detalle cada uno de los elementos aquí formados, puede ser
 tarea ardua e indeseada, sobre todo por mí. Bromas aparte, merece toda una serie 
@@ -101,11 +101,11 @@ Lanzamos el job con SUB y nos preparamos a depurar como si no hubiera un mañana
 Aquí se puede ver el log una vez superados los tres pasos.
 Para comprobar la salida nos vamos al sublog de ejecución.
 
-![](http://i.imgur.com/sYcVEQk.png)
+![](https://i.imgur.com/sYcVEQk.png)
 
 Aquí el resultado de la ejecución correcta. 
 
-![](http://i.imgur.com/MzfaoGu.png)
+![](https://i.imgur.com/MzfaoGu.png)
 
 Me he saltado las horas de búsqueda de errores y documentación que he necesitado 
 para ver funcionar el programa. Como aliciente a los que probéis a hacer pruebas en HOST

@@ -51,23 +51,23 @@ Estos ejemplos continúan el proyecto del artículo anterior.
 
 Aquí se estan usando los métodos load() y get() desde el mismo main para probar su funcionamiento y diferencias.
 
-![](http://i66.tinypic.com/534dp4.jpg)
+![](https://i.imgur.com/GmEQIGr.jpg)
 
 Esta es la salida por consola.
 
-![](http://i67.tinypic.com/143m5nd.jpg)
+![](https://i.imgur.com/3gtoAv7.jpg)
 
 Método para insertar un empleado en la tabla
 
-![](http://i65.tinypic.com/2wrnos6.jpg)
+![](https://i.imgur.com/ayHyO2W.jpg)
 
 Método que modifica el salario y comisión de un empleado dado su número de identificación.
 
-![](http://i63.tinypic.com/x4opw4.jpg)
+![](https://i.imgur.com/efqk4og.jpg)
 
 Método para borrar un empleado.
 
-![](http://i67.tinypic.com/2cnctph.jpg)
+![](https://i.imgur.com/fAwKU04.jpg)
 
 
 Si encontráis fallos en este código no dudéis en revisar el [repositorio original](https://github.com/RadW2020/Hibernate_Empresaz), seguramente está corregido, actualizado y/o ampliado. Y si no es así sois bienvenidos a modificar lo que queráis ;)

@@ -3,7 +3,7 @@ layout: post
 title: Introducción al Diseño de Videojuegos
 ---
  
-![](http://www.dreaming-arts.com/da-content/uploads/2015/02/game-designer.png)
+![](https://i.imgur.com/wYvQvSU.png)
  
 ¿Quien no ha deseado alguna vez trabajar en la industria del videojuego?
 Para llevar a cabo un videojuego una de las partes mas importantes, sobre todo

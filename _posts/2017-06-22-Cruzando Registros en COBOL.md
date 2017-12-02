@@ -6,18 +6,18 @@ title: Cruzando Registros en COBOL
 En esta ocasión vamos a trabajar con dos ficheros que tienen un índice similar. Los ordenaremos y 
 crearemos un fichero que será el resultado de unir sus registros de manera ordenada.
 
-![](http://i.imgur.com/M3ywtWz.png)
+![](https://i.imgur.com/M3ywtWz.png)
 
-![](http://i.imgur.com/XeLr8Ur.png)
-
-
-![](http://i.imgur.com/CoP3EkB.png)
+![](https://i.imgur.com/XeLr8Ur.png)
 
 
-![](http://i.imgur.com/ZmJkuPH.png)
+![](https://i.imgur.com/CoP3EkB.png)
 
 
-![](http://i.imgur.com/bu6CYJJ.png)
+![](https://i.imgur.com/ZmJkuPH.png)
+
+
+![](https://i.imgur.com/bu6CYJJ.png)
 
 Los ordenamos en un proceso muy similar al mostrado en un 
 [ANTERIOR POST](https://radw2020.github.io/2017/06/17/JCL-SORT-en-HOST/).
@@ -31,14 +31,14 @@ como en el ejemplo del enlace anterior.
 Después de ordenar únicamente por su índice de dos números de manera ascendente, tenemos:
 
 
-![](http://i.imgur.com/SHBo9aT.png)
+![](https://i.imgur.com/SHBo9aT.png)
 
 
-![](http://i.imgur.com/TVHHYcT.png)
+![](https://i.imgur.com/TVHHYcT.png)
 
 La estructura de las direcciones SCHOOL queda tal que así:
 
-![](http://i.imgur.com/Yqr4Zf4.png)
+![](https://i.imgur.com/Yqr4Zf4.png)
 
 Una vez tenemos nuestros archivos ordenados, podemos empezar a codificar el programa COBOL.
 El programa va a leer de dos archivos, que tienen una estructura similar. 
@@ -48,7 +48,7 @@ los va a comparar y a ir escribiendo en el archivo de salida de manera ordenada.
 
 # ENVIRONMENT DIVISION
 
-![](http://i.imgur.com/5iZEaDr.png)
+![](https://i.imgur.com/5iZEaDr.png)
 
 En el INPUT-OUTPUT SECTION se va a asignar las dos entradas, estos nombres ENTRADA1,
 ENTRADA2, y SALIDA deberán coincidir con los nombres que pongamos en el JCL de ejecución
@@ -62,7 +62,7 @@ Aquí podemos definir los FD de nuestros archivos.
 En este paso asignamos el formato de registro que tendrá cada linea que leamos. En este
 caso CIUDADES y PAISES.
 
-![](http://i.imgur.com/h8osAZ3.png)
+![](https://i.imgur.com/h8osAZ3.png)
 
 Los registros del archivo de salida también deberán ser definidos en este punto.
 En este ejemplo los tres archivos tienen una estructura similar para no despistar 
@@ -71,7 +71,7 @@ solo se informa de lo que se va a encontrar).
 
 El nombre elegido para la variable contenedora es CROSS-OUT.
 
-![](http://i.imgur.com/UZPImlr.png)
+![](https://i.imgur.com/UZPImlr.png)
 
 En los tres casos usaremos las variables de nivel 05 para mover datos en el proceso
 COBOL y las variables de nivel 01 para lectura y escritura e las conexiones.
@@ -83,7 +83,7 @@ Y una variable WS-EOF para controlar el fin de fichero.
 En este ejemplo hay que prestarle atención por que su diseño es determinante para 
 el algoritmo que vamos a implementar. 
 
-![](http://i.imgur.com/pFZqcgl.png)
+![](https://i.imgur.com/pFZqcgl.png)
 
 Es un alfanumérico de dos caracteres que usaremos
 como booleano para determinar los cuatro estados posibles:
@@ -102,25 +102,25 @@ En el procedure division tenemos tres PERFORM principales
   de End Of File de nivel 01 tenga como valor 'SS'. 
   - 300-FIN que cierra las conexiones y termina el programa.
 
-![](http://i.imgur.com/MJxHZsZ.png)
+![](https://i.imgur.com/MJxHZsZ.png)
 
 Párrafo **100-INICIO**
 
-![](http://i.imgur.com/VUK3k8D.png)
+![](https://i.imgur.com/VUK3k8D.png)
 
 Nótese que las lecturas a los ficheros están implementadas en párrafos también. 
 Al final de 100-INICIO se hace una lectura anticipada para evitar 
 la entrada de un registro en blanco según tenemos implementado el flujo
 general en  200-PROCESO.
 
-![](http://i.imgur.com/L7oKMbI.png)
+![](https://i.imgur.com/L7oKMbI.png)
 
 También tienen párrafos independientes la escritura de datos en la salida. 
 Uno para escribir la lectura del archivo1 y otro para el archivo2.
 
 Párrafo **200-PROCESO**
 
-![](http://i.imgur.com/clwNd5U.png)
+![](https://i.imgur.com/clwNd5U.png)
 
 
 Evalua WS-EOF y elige una opción. 
@@ -139,7 +139,7 @@ En WS-EOF con 'SN' es lo mismo pero para el otro archivo.
 Este algoritmo se podría haber reducido bastante, pero me ha parecido esta manera
 explícita más didáctica y simple para mí. 
 
-![](http://i.imgur.com/t3AZC3h.png)
+![](https://i.imgur.com/t3AZC3h.png)
 
 Por último el párrafo **300-FIN**
 
@@ -227,7 +227,7 @@ un dataset._
 
 El resultado final debería ser algo como esto:
 
-![](http://i.imgur.com/5QIgZwe.png)
+![](https://i.imgur.com/5QIgZwe.png)
 
 
 
