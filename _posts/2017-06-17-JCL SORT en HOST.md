@@ -3,7 +3,6 @@ layout: post
 title: JCL SORT en HOST
 ---
  
-[Introduce aquí tu excusa preferida para seguir leyendo este post]
  
 Vamos a ordenar un dataset que contiene registros de información usando la librería SORT.
 Tenemos un set de datos de caracteres con una serie de registros con un número y el nombre de un pais.
