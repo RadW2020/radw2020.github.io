@@ -3,13 +3,14 @@ layout: post
 title: Hyperledger Fabric
 ---
 
-En este artículo voy a  pasar directamente a comentar sonre Hyperledger Fabric pero si eres un no iniciado y quieres primero romper el hielo con esta tecnología, puedes visitar https://www.ibm.com/blockchain/hyperledger.html o en la wikipedia  https://es.wikipedia.org/wiki/Hyperledger.
+En este artículo voy a  pasar directamente a comentar sonre Hyperledger Fabric pero si eres un no iniciado y quieres primero romper el hielo con esta tecnología, puedes visitar [www.ibm.com/blockchain/hyperledger.html](https://www.ibm.com/blockchain/hyperledger.html) o en la wikipedia [wiki/Hyperledger](https://es.wikipedia.org/wiki/Hyperledger).
 
 
 ![](https://hyperledger-fabric.readthedocs.io/en/release-1.1/_images/hyperledger_fabric_logo_color.png)
-Provee de una arquitectura modular, que permite diferentes componentes con funcionalidades como el "consenso" o los"servicios para afiliados" ser tipo plug-and-play. 
 
 Hyperledger Fabric es especial porque permite a las entidades transmitir informacion confidencial sin pasar por una autoridad central. Esto se consigue mediante los canales que se pueden configurar para funcionar dentro de la red, y por la división de tareas con las que se caracterizan a los diferentes nodos dentro de la red.
+
+Provee una arquitectura modular, que permite diferentes componentes con funcionalidades como el "consenso" o los"servicios para afiliados" ser tipo plug-and-play.
 
 Por último, es conveniente recordar que, al contrario que Bitcoin que es un chain público, Hyperledger Fabric permite un despliegue **permisionado**.
 
@@ -23,8 +24,8 @@ Brian Behlendorf, Director Ejecutivo de Hyperledger, The Linux Foundation
 Son aplicaciones que actuan en nombre de una persona que propone una transaccion.
 #### Peers
 Mantienen el estado de la red y una copia del ledger. Pueden ser de dos tipos:
-* Endorsers (que simula y aplica la transaccion)
-* Commiters (que verifica y valida la transacción después de un endorsing y antes subir la transacción al blockchain)
+* **Endorsers** (que simula y aplica la transaccion)
+* **Commiters** (que verifica y valida la transacción después de un endorsing y antes subir la transacción al blockchain)
 
 #### Ordering Service
 Paso intermedio entre el Endorser y el Commiter que ordena las transacciones en un bloque y lo entrega al Committer Peer.
@@ -33,9 +34,9 @@ Paso intermedio entre el Endorser y el Commiter que ordena las transacciones en 
 
 # Alncanzar el Consenso
 #### Transaction endorsement
-Es la respuesta firmada al resultado de simular una transacción. Es una regla configurable según el diseño que queramos hacer y puede ser diferente para cada chaincode(esto es como un smartcontract) y por ende, para cada canal.
+Es la respuesta firmada al resultado de simular una transacción. Es una regla configurable según el diseño que queramos hacer y puede ser diferente para cada chaincode (similar a un smartcontract) y por ende, para cada canal.
 
-Esto se conoce como Endorsement Policy.
+Esto se conoce como 'Endorsement Policy'.
 
 Cada Endorser simula la transacción propuesta, sin actualizar el Ledger, y la devuelve validada a Client para que este la use en su flujo de trabajo.
 
