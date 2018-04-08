@@ -15,12 +15,11 @@ Mi lista de intereses es muy variada, pero os propongo una lista inicial reducid
 un poco sobre lo que espero desarrollar:
 
 * Java y Android
-* Python y Machine Learning
-* Lenguajes de Marcado: HTML, XML
-* QT y QML
-* SQL y NoSQL
-* Unity 3D
-* Y mucho más ...
+* ETL, DataWarehousing y Business Intelligence
+* Python, Deep Learning y Tensorflow
+* Angular, Ionic, MEAN
+* Hyperledger y BlockChain
+
 
 `System.out.println("Hola :D");`
 
