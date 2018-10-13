@@ -19,7 +19,7 @@ export class CustomDateProvider {
 }
 ```
 
-- Lo siguiente que tenemos que hacer es aplicar el decorador _injectable_ que nos ofrece el módulo _@angular/core_
+- Lo siguiente que tenemos que hacer es aplicar el decorador _Injectable_ que nos ofrece el módulo _@angular/core_
 
 ``` typescript
 import {Injectable} from '@angular/core';
@@ -31,6 +31,7 @@ export class CustomDateProvider {
   }
 }
 ```
+
 - Una vez lista nuestra clase debemos actualizar el método bootstrap de _main.ts_
 
 ``` typescript
@@ -40,11 +41,12 @@ import {CustomDateProvider} from './svc.date';
 
 bootstrap(AppComponent, [CustomDateProvider]);
 ```
+
 - Y ya podemos usar nuestra clase inyectable donde queramos. Para ello, en cada módulo que se use hay que:
   
   - Añadir el import que incluya la clase inyectable.
-  - Añadira la clase a la lista de _providers_ del decorador de clase.
-  - Inyectas una instancia de la clase a través del constructor.
+  - Añadir la clase a la lista de _providers_ del decorador de clase.
+  - Inyectar una instancia de la clase a través del constructor.
 
 ``` typescript
 import {Component} from '@angular/core';
