@@ -32,6 +32,7 @@ export class CustomDateProvider {
 }
 ```
 - Una vez lista nuestra clase debemos actualizar el método bootstrap de _main.ts_
+
 ``` typescript
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {AppComponent} from './app.component';
