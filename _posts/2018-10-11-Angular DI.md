@@ -9,7 +9,7 @@ Según cada lenguaje de programación o framework esto se puede conseguir de dif
 
 En Angular esto se consigue siguiendo estos pasos:
 
-- Definimos la clase que se va a injectar. Vamos a suponer que queremos una clase que admita un dato tipo fecha y devuelva esa fecha en formato [YYYY][MM][DD]
+- Definimos la clase que se va a inyectar. Vamos a suponer que queremos una clase que admita un dato tipo fecha y devuelva esa fecha en formato [YYYY][MM][DD]
 
 ``` typescript
 export class CustomDateProvider {  

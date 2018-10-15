@@ -3,7 +3,7 @@ layout: post
 title: Reactive Architecture != Reactive Programming
 ---
 
-# Reactive Systems vs Reactive Programming
+
 - Reactive Systems and Reactive Programming are often misunderstood. 
 - They are not equivalent
 - Reactive Systems apply the **Reactive Principles** at the architectural levels.
