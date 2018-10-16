@@ -16,6 +16,9 @@ comments: true
   {% if post.image %}
   <img src="{{ site.url }}/imagen/{{ post.image }}">
   {% endif %}
+  {% if page.image %}
+  <img src="{{ site.url }}/imagen/{{ page.image }}">
+  {% endif %}
   
   
   {{ content }}
