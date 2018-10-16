@@ -71,7 +71,7 @@ function sumMatrix(matrix: number[][]) {
     return sum;
 }
 ```
-Este ejemplo funciona correctamente, aunque lo único que ganamos es que sea mas difícil su lectura.
+Este ejemplo funciona correctamente, aunque lo único que ganamos es que sea más difícil su lectura.
 
 
 ### const declarations
