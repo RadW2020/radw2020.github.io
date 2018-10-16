@@ -4,6 +4,8 @@ title: Declaraciones y Tipos en Typescript
 image: featured_image_TS.bmp
 ---
 
+<img src="{{ site.baseurl }}/imagens/{{ post.image }}">
+
 Si conoces algún lenguaje de POO tipado como puede ser Java o C# todo esto te va a parecer tan evidente te será imposible terminar el artículo. De todas formas, a modo ilustrativo, si se va a manejar Typescript es interesante conocer cual es su lugar en el ecosistema Javascript :)
 
 Sirva este repaso a modo de resumen y de toma de contacto.
