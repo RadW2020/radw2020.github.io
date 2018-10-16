@@ -6,9 +6,9 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Mai Vloj
+title:            The Vloj
 tagline:          'Notas para el futuro'
-description:      'Personal Tech Blog'
+description:      'Notas para el futuro'
 url:              http://radw2020.github.io
 baseurl:          /
 
