@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reactive Architecture != Reactive Programming
+title: Reactive Architecture <> Reactive Programming
 image: f_a_reactivity.jpg
 ---
 
