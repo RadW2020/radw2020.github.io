@@ -7,20 +7,10 @@ comments: true
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
-  {% if layout.image %}
-    <img src="{{ site.url }}/imagens/{{ layout.image }}">
+  {% if page.feature_image %}
+  <img src="{{ site.url }}/imagens/{{ page.featured_image }}">
   {% endif %}
-  {% if default.image %}
-  <img src="{{ site.url }}/imagen/{{ default.image }}">
-  {% endif %}
-  {% if post.image %}
-  <img src="{{ site.url }}/imagen/{{ post.image }}">
-  {% endif %}
-  {% if page.image %}
-  <img src="{{ site.url }}/imagen/{{ page.image }}">
-  {% endif %}
-  
-  
+
   {{ content }}
 </div>
 
