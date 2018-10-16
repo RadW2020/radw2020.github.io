@@ -5,10 +5,13 @@ comments: true
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title" property="og:title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+
   {% if page.image %}
-  <img src="{{ site.url }}/imagens/{{ page.image }}">
+  <img  src="{{ site.url }}/imagens/{{ page.image }}"  
+        property="og:image"
+        max-width="250">
   {% endif %}
 
   {{ content }}
