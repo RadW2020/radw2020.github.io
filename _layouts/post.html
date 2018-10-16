@@ -9,9 +9,7 @@ comments: true
   <span class="post-date">{{ page.date | date_to_string }}</span>
 
   {% if page.image %}
-  <img  src="{{ site.url }}/imagens/{{ page.image }}"  
-        property="og:image"
-        width="300">
+  <img  src="{{ site.url }}/imagens/{{ page.image }}" width="300" property="og:image">
   {% endif %}
 
   {{ content }}
