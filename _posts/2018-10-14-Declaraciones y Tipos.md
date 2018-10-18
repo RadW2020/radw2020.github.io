@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Declaraciones y Tipos en Typescript
-author: RadW2020
 image: featured_image_TS.bmp
 ---
 

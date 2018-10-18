@@ -3,7 +3,6 @@ layout: post
 title: Formularios Reactivos en Angular
 ---
 
-# Reactive Forms
 Los _Formularios Reactivos_ nos proveen de una manera de manejar las entradas de datos del usuario cuyos valores cambian en el tiempo.
 
 Cada cambio que ocurre en el formulario devuelve un nuevo estado, lo que ayuda a mantener la integridad del modelo entre cada cambio. Los formularios reactivos están basados en flujos de datos de tipo _Observable_, donde cada entrada y cada valor toman la forma de un flujo de datos que puede ser accedido de manera asíncrona.
