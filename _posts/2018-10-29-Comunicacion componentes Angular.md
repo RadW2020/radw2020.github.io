@@ -14,9 +14,6 @@ En Angular esta técnica se aplica de la siguiente manera:
 La clase HijoComponent define su atributo _opina_ con el decorador **@Output()**. Este es inicializado como un **EventEmitter** del tipo _boolean_.
 
 Posteriormente, en el método ```voto(opinion: boolean)``` se implementa la funcionalidad de la emisión de su propio argumento como un evento del emisor de eventos ```this.opina.emit(opinion);```
-```
-
-```
 
 ```typescript
 import { Component, EventEmitter, Input, Output } from '@angular/core';
