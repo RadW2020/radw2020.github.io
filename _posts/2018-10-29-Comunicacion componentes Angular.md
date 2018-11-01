@@ -5,7 +5,7 @@ image: featured_image_com_comp_ang.png
 ---
 
 Hay varias maneras de hacer que los componentes interactúen entre ellos en Angular. 
-Una de ellas es hacer que uno de los componentes emita un evento. Podemos llamar al componente que emite el evento _componente hijo_ y, al componente que escucha el evento emitido lo llamamos _componente padre_.
+Una de ellas es hacer que uno de los componentes emita un evento. Podemos llamar al componente que emite el evento _componente hijo_ y, al componente que escucha el evento emitido _componente padre_.
 
 En Angular esta técnica se aplica de la siguiente manera:
 
@@ -37,7 +37,8 @@ export class HijoComponent {
   }
 }
 ```
-Vemos en esta imagen, que aparece con el nombre Fulanito, como quedaría este componente representado. Este nombre le ha sido dado por el componente padre mediante una asignación a su propiedad (property binding). 
+
+Vemos en esta imagen, que aparece con el nombre Fulanito, como quedaría representado este componente. Este nombre le ha sido dado por el componente padre mediante una asignación a su propiedad (property binding). 
 
 ![](https://i.imgur.com/OTn9POA.png)
 
