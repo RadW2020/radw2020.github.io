@@ -90,6 +90,6 @@ Y para el caso del event binding, para extraer información de los eventos emiti
 Esto ayuda bastante a identificar rapidamente la estructura de un componente hijo y que opciones de comunicación tenemos.
 
 
-
+https://stackblitz.com/edit/angular-8glplz
 
 
