@@ -23,7 +23,7 @@ Create three minimal Angular projects:
 ```bash
 ng new HelloFoo --minimal
 ng new HelloBar --minimal
-ng new ComponentsLibrary --minimal
+ng generate library ComponentsLibrary
 ```
 
 After a few tweaks, __to help us differentiate both Hello projects__, we could have something like this.
@@ -32,7 +32,7 @@ After a few tweaks, __to help us differentiate both Hello projects__, we could h
 
 ### Prepare the custom library project
 
-We put a special shape to our __components library__. We can delete most Angular configuration files as we only need to export components/modules there.
+Pay attention to the shape of our __components library__. We have generate it as a library. Doing so, we don't need to  delete non useful Angular configuration files as we only need to export components/modules there.
 
 For this occasion, lets create a footer module in our new components library project. 
 
