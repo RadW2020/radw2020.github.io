@@ -9,8 +9,7 @@
           border-radius: 50%;
           display: block;
           margin: 0 auto;
-          top: 20px;
-          bottom: 10px;
+          top: 0px;
         "
         src="{{ site.url }}/avatar.png"
       />
@@ -38,12 +37,10 @@
         >{{ node.title }}</a
       >
       {% endif %} {% endif %} {% endfor %}
-
-      <a class="sidebar-nav-item" href="{{ site.url }}/atom.xml">RSS</a>
     </nav>
 
     <p class="footer-text">
-      {{ site.time | date: '%Y' }} Made with ❤️ in Valencia, Spain
+      {{ site.time | date: '%Y' }} Made with ❤️ from Valencia, Spain
     </p>
   </div>
 </div>
