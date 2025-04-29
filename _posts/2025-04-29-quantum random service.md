@@ -92,11 +92,11 @@ def generate_quantum_random_number(min_value, max_value):
 
 A continuación puedes ver cómo se construye un circuito cuántico para generar un número aleatorio de 6 bits. Cada línea representa un qubit, y cada bloque rojo es una puerta Hadamard que pone el qubit en superposición antes de medirlo.
 
-![Quantum Circuit for 6-Bit Random Number Generation](https://imgur.com/HE4OUDh)
+![Quantum Circuit for 6-Bit Random Number Generation](https://i.imgur.com/HE4OUDh.png)
 
 La siguiente gráfica muestra la distribución de resultados al medir un solo qubit 1000 veces. Como se espera, la probabilidad de obtener 0 o 1 es prácticamente idéntica, demostrando la aleatoriedad cuántica.
 
-![Measurement Results for 1000 Shots](https://imgur.com/iK8AwW9)
+![Measurement Results for 1000 Shots](https://i.imgur.com/iK8AwW9.png)
 
 ---
 
