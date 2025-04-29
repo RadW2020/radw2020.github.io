@@ -1,38 +1,48 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-
-      <img width="220" height="225" style="position: relative; border-radius: 50%; display: block; margin: 0 auto; top: 20px;"
-      src="https://i.imgur.com/udceg2i.png?raw=true"/>
+      <img
+        width="220"
+        height="225"
+        style="
+          position: relative;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto;
+          top: 20px;
+        "
+        src="https://i.imgur.com/udceg2i.png?raw=true"
+      />
 
       <h2>
-        <a href="{{ site.url }}">
-          {{ site.title }}
-        </a>
+        <a href="{{ site.url }}"> {{ site.title }} </a>
       </h2>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Inicio</a>
+      <a
+        class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}"
+        href="{{ site.url }}"
+        >Inicio</a
+      >
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
-
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
+      {% comment %} The code below dynamically generates a sidebar nav of pages
+      with `layout: page` in the front-matter. See readme for usage. {%
+      endcomment %} {% assign pages_list = site.pages %} {% for node in
+      pages_list %} {% if node.title != null %} {% if node.layout == "page" %}
+      <a
+        class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}"
+        href="{{ node.url }}"
+        >{{ node.title }}</a
+      >
+      {% endif %} {% endif %} {% endfor %}
 
       <a class="sidebar-nav-item" href="{{ site.url }}/atom.xml">RSS</a>
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}. Todos los derechos reservados.</p>
+    <p class="footer-text">
+      {{ site.time | date: '%Y' }} Made with ❤️ in Valencia, Spain
+    </p>
   </div>
 </div>
