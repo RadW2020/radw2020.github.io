@@ -1,24 +1,24 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      rouge
+markdown: kramdown
+highlighter: rouge
 
 # Permalinks
-permalink:        pretty
+permalink: pretty
 
 # Setup
-title:            The Vloj
-tagline:          'Notas para el futuro'
-description:      'Notas para el futuro'
-url:              https://radw2020.github.io
-baseurl:          /
+title: The Vloj
+tagline: "Notas para el futuro"
+description: "Notas para el futuro"
+url: https://radw2020.github.io
+baseurl: /
 
 author:
-  name:           'Raúl Jiménez'
-  url:            https://twitter.com/RadW2020
-paginate:         30
+  name: "Raúl JM"
+  url: https://www.linkedin.com/in/raul-jimenez-martin-radw2020/
+paginate: 30
 
 # Custom vars
-version:          2.1.0
-gems:             [jekyll-paginate]
+version: 2.1.0
+gems: [jekyll-paginate]
 
-github:           'radw2020'
+github: "radw2020"
