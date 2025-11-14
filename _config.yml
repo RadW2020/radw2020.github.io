@@ -1,13 +1,15 @@
 # Dependencies
+# Force kramdown instead of commonmark (GitHub Pages default)
 markdown: kramdown
 highlighter: rouge
+
+# Use custom layouts (no theme)
+# GitHub Pages may auto-detect theme, but custom layouts take precedence
 
 # Kramdown configuration
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block: line_numbers
   hard_wrap: false
   auto_ids: true
   footnote_nr: 1
