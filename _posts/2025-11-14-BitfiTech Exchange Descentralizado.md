@@ -35,6 +35,120 @@ Peer discovery happens through three complementary mechanisms. On local networks
 
 The complete lifecycle of a node involves several stages. When starting up, the node loads information about previously connected peers from persistent storage and initializes its TCP server. It then begins the discovery process using all available mechanisms simultaneously. As it finds peers, it establishes direct TCP connections. Once connected to the network, it can propagate orders using the gossip protocol. Each node independently performs order matching using vector clocks to maintain consistent event ordering despite the lack of a central clock.
 
+### System Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph "Node A"
+        A1[Orderbook]
+        A2[Matching Engine]
+        A3[TCP Server]
+        A4[DHT Server]
+        A5[Gossip Protocol]
+    end
+
+    subgraph "Node B"
+        B1[Orderbook]
+        B2[Matching Engine]
+        B3[TCP Server]
+        B4[DHT Server]
+        B5[Gossip Protocol]
+    end
+
+    subgraph "Node C"
+        C1[Orderbook]
+        C2[Matching Engine]
+        C3[TCP Server]
+        C4[DHT Server]
+        C5[Gossip Protocol]
+    end
+
+    A3 <-->|Direct TCP| B3
+    B3 <-->|Direct TCP| C3
+    C3 <-->|Direct TCP| A3
+
+    A4 <-.->|DHT Lookup| B4
+    B4 <-.->|DHT Lookup| C4
+    C4 <-.->|DHT Lookup| A4
+
+    A5 -->|Propagate Orders| B5
+    B5 -->|Propagate Orders| C5
+    C5 -->|Propagate Orders| A5
+```
+
+This diagram illustrates how each node maintains its own complete instance of the orderbook and matching engine, while communicating with peers through both direct TCP connections and the distributed hash table. The gossip protocol creates redundant paths for order propagation, ensuring reliability even if individual connections fail.
+
+### Order Propagation Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant NodeA
+    participant NodeB
+    participant NodeC
+    participant NodeD
+
+    User->>NodeA: Create Order
+    NodeA->>NodeA: Add to local orderbook
+    NodeA->>NodeA: Generate unique message ID
+
+    par Gossip to peers
+        NodeA->>NodeB: Forward order
+        NodeA->>NodeC: Forward order
+    end
+
+    NodeB->>NodeB: Check message ID cache
+    NodeB->>NodeB: Add to orderbook
+
+    par NodeB gossips
+        NodeB->>NodeD: Forward order
+        NodeB->>NodeC: Forward order (duplicate)
+    end
+
+    NodeC->>NodeC: Check message ID cache
+    NodeC->>NodeC: Add to orderbook
+    NodeC->>NodeD: Forward order
+
+    NodeD->>NodeD: Receives from both B and C
+    NodeD->>NodeD: Deduplicates using message ID
+    NodeD->>NodeD: Add to orderbook once
+```
+
+This sequence shows how an order created on Node A propagates through the network. The message deduplication mechanism prevents nodes from processing the same order multiple times, even though they might receive it from multiple sources.
+
+### Peer Discovery Mechanisms
+
+```mermaid
+graph LR
+    subgraph "Discovery Methods"
+        A[New Node Starting]
+
+        B[mDNS Broadcast]
+        C[Bootstrap Nodes]
+        D[Persistent Peers]
+
+        E[Local Network Peers]
+        F[Remote Network Peers]
+        G[Previously Known Peers]
+    end
+
+    A --> B
+    A --> C
+    A --> D
+
+    B --> E
+    C --> F
+    D --> G
+
+    E --> H[Peer Exchange]
+    F --> H
+    G --> H
+
+    H --> I[Full Network Discovery]
+```
+
+The discovery process uses three complementary mechanisms simultaneously. mDNS handles local network discovery automatically, bootstrap nodes provide entry points to wider networks, and persistent peer storage enables quick reconnection to known nodes. Once connected to any peers, the peer exchange mechanism helps discover the broader network topology.
+
 ---
 
 ## Technical Foundations
@@ -45,7 +159,72 @@ The networking layer builds on standard TCP sockets for peer-to-peer communicati
 
 One of the more challenging aspects turned out to be maintaining consistent event ordering without a central clock. In a distributed system, you can't rely on timestamps because different nodes' clocks may be skewed. I implemented vector clocks to solve this problem. Each event carries a vector representing logical time across all known nodes, allowing any node to independently determine the causal ordering of events. When a node sees two events with vector clocks {node1: 5, node2: 3} and {node1: 4, node2: 7}, it can infer their causal relationship without needing synchronized physical clocks.
 
+### Vector Clock Example
+
+```
+Event Timeline Across Three Nodes:
+
+Node A        Node B        Node C
+  |             |             |
+  | Order1      |             |
+  | [A:1,B:0,C:0]            |
+  |             |             |
+  |------------>| Order1      |
+  |             | [A:1,B:1,C:0]
+  |             |             |
+  |             |------------>| Order1
+  |             |             | [A:1,B:1,C:1]
+  |             |             |
+  |             | Order2      |
+  |             | [A:1,B:2,C:1]
+  |             |             |
+  | Order3      |             |
+  | [A:2,B:1,C:0]            |
+  |             |             |
+
+Comparing vector clocks:
+- Order1 at C [A:1,B:1,C:1] happened after Order1 at B [A:1,B:1,C:0]
+- Order2 [A:1,B:2,C:1] and Order3 [A:2,B:1,C:0] are concurrent
+  (neither happened before the other)
+```
+
+This visualization shows how vector clocks capture causality. When Node A creates Order1, it increments its own counter. When Node B receives and processes Order1, it increments its counter and updates its knowledge of Node A's counter. The vector clock grows as the event propagates, creating a complete causal history. When comparing Order2 and Order3, we can see they're concurrent because neither vector is entirely less than or equal to the other.
+
 For fault tolerance, I incorporated the circuit breaker pattern. When a connection to a peer repeatedly fails, the circuit breaker transitions to an open state where it temporarily stops attempting connections, preventing resource waste on dead peers. After a timeout, it enters a half-open state where it allows probe attempts, and if those succeed, it closes the circuit and resumes normal operation. This creates a self-healing system that adapts to changing network conditions.
+
+### Circuit Breaker State Machine
+
+```mermaid
+stateDiagram-v2
+    [*] --> Closed
+
+    Closed --> Open: Consecutive failures exceed threshold
+    Closed --> Closed: Request succeeds
+
+    Open --> HalfOpen: Timeout expires
+    Open --> Open: Requests blocked (fail fast)
+
+    HalfOpen --> Closed: Probe request succeeds
+    HalfOpen --> Open: Probe request fails
+    HalfOpen --> HalfOpen: Limited requests allowed
+
+    note right of Closed
+        Normal operation
+        All requests attempted
+    end note
+
+    note right of Open
+        Failing fast
+        Protecting resources
+    end note
+
+    note right of HalfOpen
+        Testing recovery
+        Limited traffic
+    end note
+```
+
+The circuit breaker prevents cascading failures in the peer network. When a peer becomes unresponsive, the circuit breaker stops wasting resources on connection attempts. After a cooling-off period, it tentatively tries to reconnect. If the peer has recovered, normal operation resumes. If not, the circuit reopens and waits longer before trying again.
 
 The gossip protocol handles information propagation with built-in message deduplication. Each message carries a unique identifier, and nodes maintain a cache of recently seen message IDs. When receiving a message, a node checks if it has already processed that ID. If so, it discards the duplicate. Otherwise, it processes the message and forwards it to its peers. This simple mechanism prevents message storms while ensuring eventual delivery to all nodes.
 
@@ -75,6 +254,43 @@ The matching algorithm implements price-time priority, which is standard in prof
 
 Partial matching was another interesting challenge. An order for 100 units might match against three separate orders for 30, 40, and 30 units. The algorithm needs to track partially filled orders, update remaining quantities, and ensure the filled portions get properly recorded. The matching engine processes incoming orders against the orderbook, executing whatever portion can be filled and leaving the remainder as a resting order if it's not immediately fully matched.
 
+### Order Matching Process
+
+```mermaid
+flowchart TD
+    A[New Order Arrives] --> B{Order Type?}
+
+    B -->|Buy Order| C[Check Sell Side of Orderbook]
+    B -->|Sell Order| D[Check Buy Side of Orderbook]
+
+    C --> E{Any matching<br/>sell orders?}
+    D --> F{Any matching<br/>buy orders?}
+
+    E -->|Yes| G[Sort by Price-Time Priority]
+    F -->|Yes| H[Sort by Price-Time Priority]
+
+    G --> I[Execute against best price]
+    H --> I
+
+    I --> J{Order fully filled?}
+
+    J -->|Yes| K[Mark order complete]
+    J -->|No| L{More matches<br/>available?}
+
+    L -->|Yes| I
+    L -->|No| M[Add remaining to orderbook]
+
+    E -->|No| M
+    F -->|No| M
+
+    K --> N[Broadcast trade execution]
+    M --> N
+
+    N --> O[Update all nodes via gossip]
+```
+
+This flowchart illustrates the matching process. When an order arrives, it first checks the opposite side of the orderbook for potential matches. If matches exist, they're sorted by price-time priority. The engine executes against the best available price, continuing until the order is fully filled or no more matches are available. Any unfilled portion becomes a resting order in the orderbook.
+
 ---
 
 ## Project Structure and Organization
@@ -84,6 +300,55 @@ The codebase organizes into several logical layers. The p2p directory contains e
 Utility modules provide cross-cutting concerns like configuration management, logging, and vector clock operations. Separating the vector clock logic into its own module made it easier to test and reason about independently from the rest of the system.
 
 The test suite covers multiple scenarios including peer discovery in various network conditions, order propagation across the network, edge cases in the matching algorithm, fault handling and automatic reconnection, and orderbook synchronization between nodes. Running the tests with coverage reporting helped identify areas that needed additional test cases.
+
+### Project Structure Diagram
+
+```
+bitfitech/
+│
+├── src/
+│   ├── p2p/                    # Peer-to-Peer Networking Layer
+│   │   ├── discovery/
+│   │   │   ├── mdns.js         # Local network discovery
+│   │   │   ├── bootstrap.js    # Bootstrap node connections
+│   │   │   └── peer-exchange.js # Peer information sharing
+│   │   │
+│   │   ├── routing/
+│   │   │   ├── gossip.js       # Gossip protocol implementation
+│   │   │   └── deduplication.js # Message deduplication
+│   │   │
+│   │   └── peers/
+│   │       ├── connection.js   # TCP connection management
+│   │       └── persistence.js  # Peer storage
+│   │
+│   ├── core/                   # Business Logic Layer
+│   │   ├── orderbook.js        # Distributed orderbook
+│   │   ├── matching.js         # Price-time priority matching
+│   │   └── order.js            # Order data structures
+│   │
+│   ├── services/               # DHT Services (Optional)
+│   │   └── grenache/
+│   │       ├── embedded.js     # Embedded DHT server
+│   │       └── client.js       # DHT client
+│   │
+│   ├── clients/                # Exchange Interface
+│   │   └── exchange-client.js  # User-facing API
+│   │
+│   └── utils/                  # Cross-Cutting Concerns
+│       ├── config.js           # Configuration management
+│       ├── logger.js           # Logging system
+│       ├── vector-clock.js     # Distributed event ordering
+│       └── circuit-breaker.js  # Fault tolerance
+│
+├── tests/                      # Test Suite
+│   ├── unit/
+│   ├── integration/
+│   └── e2e/
+│
+└── package.json
+```
+
+This structure separates concerns cleanly. The networking layer handles peer communication independently of the business logic. The core layer implements exchange functionality without knowing about network details. Utility modules provide shared functionality that multiple layers use.
 
 ---
 
@@ -100,6 +365,33 @@ I built this primarily as a learning platform for exploring distributed systems 
 ## What I Learned About Distributed Systems
 
 Building BitfiTech deepened my understanding of several fundamental distributed systems concepts. The CAP theorem became concrete rather than abstract. In a network partition, you must choose between consistency and availability. BitfiTech chooses availability, allowing nodes to continue operating even when partitioned, accepting that they may temporarily have divergent views of the orderbook.
+
+### CAP Theorem Trade-offs in BitfiTech
+
+```mermaid
+graph TD
+    A[CAP Theorem] --> B[Consistency]
+    A --> C[Availability]
+    A --> D[Partition Tolerance]
+
+    E[Network Partition Occurs] --> F{Design Choice}
+
+    F -->|BitfiTech's Choice| G[Availability + Partition Tolerance]
+    F -->|Alternative| H[Consistency + Partition Tolerance]
+
+    G --> I[Nodes continue operating independently]
+    G --> J[Orderbooks may temporarily diverge]
+    G --> K[Eventual consistency when partition heals]
+
+    H --> L[Some nodes must stop accepting orders]
+    H --> M[Ensures all nodes see same state]
+    H --> N[Reduced availability during partition]
+
+    style G fill:#90EE90
+    style H fill:#FFB6C6
+```
+
+This diagram illustrates the fundamental trade-off in distributed systems. BitfiTech prioritizes availability and partition tolerance, allowing the system to continue functioning even when network partitions occur. The trade-off is that nodes might temporarily have different views of the orderbook, which resolve through eventual consistency once the partition heals.
 
 Eventual consistency proved more subtle than I expected. Just because every node eventually receives every order doesn't mean they all see orders in the same sequence. Vector clocks solve the causal ordering problem, but they don't provide total ordering without additional mechanisms. Two concurrent orders with incomparable vector clocks could be processed in different sequences by different nodes.
 
