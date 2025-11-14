@@ -5,5 +5,40 @@
     {% include sidebar.html %}
 
     <div class="content container">{{ content }}</div>
+
+    <!-- Mermaid.js initialization and code block conversion -->
+    <script>
+      // Convert code blocks with language-mermaid to mermaid divs
+      document.addEventListener("DOMContentLoaded", function () {
+        // Find all code blocks - check multiple possible class names
+        const mermaidCodeBlocks = document.querySelectorAll(
+          'code.language-mermaid, code[class*="mermaid"], pre code[class*="mermaid"]'
+        );
+
+        mermaidCodeBlocks.forEach(function (block) {
+          // Get the parent pre element (or use block if it's already a pre)
+          const container = block.parentElement;
+          const isPre = container.tagName === "PRE";
+          const targetElement = isPre ? container : block;
+
+          // Create a new div with class mermaid
+          const mermaidDiv = document.createElement("div");
+          mermaidDiv.className = "mermaid";
+          mermaidDiv.textContent = block.textContent || block.innerText;
+
+          // Replace the container with the mermaid div
+          targetElement.parentNode.replaceChild(mermaidDiv, targetElement);
+        });
+
+        // Initialize Mermaid after converting blocks
+        if (typeof mermaid !== "undefined") {
+          mermaid.initialize({
+            startOnLoad: true,
+            theme: "default",
+            securityLevel: "loose",
+          });
+        }
+      });
+    </script>
   </body>
 </html>
