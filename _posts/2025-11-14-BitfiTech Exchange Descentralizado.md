@@ -161,31 +161,21 @@ One of the more challenging aspects turned out to be maintaining consistent even
 
 ### Vector Clock Example
 
-```
-Event Timeline Across Three Nodes:
+```mermaid
+sequenceDiagram
+    participant A as Node A
+    participant B as Node B
+    participant C as Node C
 
-Node A        Node B        Node C
-  |             |             |
-  | Order1      |             |
-  | [A:1,B:0,C:0]            |
-  |             |             |
-  |------------>| Order1      |
-  |             | [A:1,B:1,C:0]
-  |             |             |
-  |             |------------>| Order1
-  |             |             | [A:1,B:1,C:1]
-  |             |             |
-  |             | Order2      |
-  |             | [A:1,B:2,C:1]
-  |             |             |
-  | Order3      |             |
-  | [A:2,B:1,C:0]            |
-  |             |             |
+    Note over A: Order1<br/>[A:1,B:0,C:0]
+    A->>B: Order1 message
+    Note over B: Order1<br/>[A:1,B:1,C:0]
+    B->>C: Order1 message
+    Note over C: Order1<br/>[A:1,B:1,C:1]
+    Note over B: Order2<br/>[A:1,B:2,C:1]
+    Note over A: Order3<br/>[A:2,B:1,C:0]
 
-Comparing vector clocks:
-- Order1 at C [A:1,B:1,C:1] happened after Order1 at B [A:1,B:1,C:0]
-- Order2 [A:1,B:2,C:1] and Order3 [A:2,B:1,C:0] are concurrent
-  (neither happened before the other)
+    Note over A,C: Comparing vector clocks:<br/>- Order1 at C [A:1,B:1,C:1] happened<br/>&nbsp;&nbsp;after Order1 at B [A:1,B:1,C:0]<br/>- Order2 [A:1,B:2,C:1] and Order3<br/>&nbsp;&nbsp;[A:2,B:1,C:0] are concurrent<br/>&nbsp;&nbsp;(neither happened before the other)
 ```
 
 This visualization shows how vector clocks capture causality. When Node A creates Order1, it increments its own counter. When Node B receives and processes Order1, it increments its counter and updates its knowledge of Node A's counter. The vector clock grows as the event propagates, creating a complete causal history. When comparing Order2 and Order3, we can see they're concurrent because neither vector is entirely less than or equal to the other.
@@ -301,57 +291,6 @@ Utility modules provide cross-cutting concerns like configuration management, lo
 
 The test suite covers multiple scenarios including peer discovery in various network conditions, order propagation across the network, edge cases in the matching algorithm, fault handling and automatic reconnection, and orderbook synchronization between nodes. Running the tests with coverage reporting helped identify areas that needed additional test cases.
 
-### Project Structure Diagram
-
-```
-bitfitech/
-│
-├── src/
-│   ├── p2p/                    # Peer-to-Peer Networking Layer
-│   │   ├── discovery/
-│   │   │   ├── mdns.js         # Local network discovery
-│   │   │   ├── bootstrap.js    # Bootstrap node connections
-│   │   │   └── peer-exchange.js # Peer information sharing
-│   │   │
-│   │   ├── routing/
-│   │   │   ├── gossip.js       # Gossip protocol implementation
-│   │   │   └── deduplication.js # Message deduplication
-│   │   │
-│   │   └── peers/
-│   │       ├── connection.js   # TCP connection management
-│   │       └── persistence.js  # Peer storage
-│   │
-│   ├── core/                   # Business Logic Layer
-│   │   ├── orderbook.js        # Distributed orderbook
-│   │   ├── matching.js         # Price-time priority matching
-│   │   └── order.js            # Order data structures
-│   │
-│   ├── services/               # DHT Services (Optional)
-│   │   └── grenache/
-│   │       ├── embedded.js     # Embedded DHT server
-│   │       └── client.js       # DHT client
-│   │
-│   ├── clients/                # Exchange Interface
-│   │   └── exchange-client.js  # User-facing API
-│   │
-│   └── utils/                  # Cross-Cutting Concerns
-│       ├── config.js           # Configuration management
-│       ├── logger.js           # Logging system
-│       ├── vector-clock.js     # Distributed event ordering
-│       └── circuit-breaker.js  # Fault tolerance
-│
-├── tests/                      # Test Suite
-│   ├── unit/
-│   ├── integration/
-│   └── e2e/
-│
-└── package.json
-```
-
-This structure separates concerns cleanly. The networking layer handles peer communication independently of the business logic. The core layer implements exchange functionality without knowing about network details. Utility modules provide shared functionality that multiple layers use.
-
----
-
 ## Security Considerations and Current Limitations
 
 The current implementation includes basic security measures like peer verification through a handshake protocol, validation of message schemas to reject malformed data, rate limiting to prevent spam attacks, and fault isolation to prevent one misbehaving peer from affecting others.
@@ -463,4 +402,4 @@ For deeper understanding of the underlying technologies, the Grenache framework 
 
 ---
 
-*November 2025*
+_November 2025_
