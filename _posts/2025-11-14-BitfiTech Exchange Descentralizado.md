@@ -226,8 +226,6 @@ The system supports three operational modes, each useful for different purposes.
 
 For testing and development, there's a pure P2P mode that removes the DHT layer entirely, leaving only direct TCP connections. This simplifies debugging by reducing the number of moving parts, though it doesn't meet the full specification since the Grenache DHT was part of the original design requirements.
 
-Finally, there's a legacy mode that connects to external Grenache servers rather than running embedded DHT servers. I kept this mode for backward compatibility, but it introduces centralization through those external servers and isn't recommended for actual use.
-
 Setting up the system requires Node.js and npm with at least 512MB of available RAM. The quick start process involves cloning the repository, installing dependencies with npm, and starting a node. By default, it uses port 3000 for P2P connections, port 20001 for the Grape DHT, and port 30001 for the Grape API.
 
 Testing with multiple nodes is straightforward. Each node can be configured using environment variables to use different ports. I typically run one node with default settings, then start additional nodes with P2P_PORT set to different values like 3001, 3002, and so on. The nodes discover each other through mDNS on the local network and establish connections automatically.
