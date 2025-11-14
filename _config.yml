@@ -2,13 +2,27 @@
 markdown: kramdown
 highlighter: rouge
 
+# Kramdown configuration
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block: line_numbers
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
 # Permalinks
 permalink: pretty
 
 # Setup
 title: The Vloj
 tagline: "Notes from other times"
-description: "Backend developer who loves clean code, good coffee, and building things with Node.js, TypeScript, and cloud tech. Let’s make software awesome!"
+description: "Backend developer who loves clean code, and building things with Node.js, TypeScript, and cloud tech. Let’s make software awesome!"
 url: https://radw2020.github.io
 baseurl: /
 
@@ -17,8 +31,11 @@ author:
   url: https://www.linkedin.com/in/raul-jimenez-martin-radw2020/
 paginate: 30
 
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-paginate
+
 # Custom vars
 version: 2.1.0
-gems: [jekyll-paginate]
 
 github: "radw2020"
