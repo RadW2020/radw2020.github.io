@@ -3,25 +3,25 @@ layout: page
 title: About Me
 ---
 
-Senior Backend Engineer with 6+ years of experience in building robust backend systems and scalable APIs. Currently working at Crowd Digital, I specialize in JavaScript/TypeScript, Node.js, and cloud technologies.
+Senior Backend Engineer with 7+ years of experience in building robust backend systems and scalable APIs. Currently working at Crowd Digital, I specialize in JavaScript/TypeScript, Node.js and cloud technologies.
 
 ## Professional Focus
 
 My expertise lies in:
 
 - Backend Development & Microservices Architecture
-- Cloud Infrastructure (AWS) & Infrastructure as Code (Terraform)
-- API Design & Development
-- Data Engineering & ETL Processes
 - Performance Optimization & Scalability
+- API Design & Development
+- Cloud Infrastructure (AWS) & Infrastructure as Code (Terraform)
 - Clean Code & Best Practices
+- Data Engineering & ETL Processes
 
 ## Technical Stack
 
 - **Backend**: Node.js, TypeScript, Nest.js, Microservices
-- **Cloud & DevOps**: AWS, Terraform, Docker, CI/CD
+- **Cloud & DevOps**: Docker, AWS, Terraform, CI/CD
 - **Databases**: PostgreSQL, MongoDB, Redis
-- **Frontend**: React, Angular, Next.js
+- **Frontend**: Next.js
 - **Tools**: Git, GitHub, Jira
 
 ## Personal Interests
