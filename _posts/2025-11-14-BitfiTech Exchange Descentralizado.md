@@ -1,9 +1,9 @@
 ---
 layout: post
-title: BitfiTech - Building a Truly Decentralized Exchange
+title: Decentralized Exchange
 ---
 
-# BitfiTech: A Journey into Peer-to-Peer Exchange Architecture
+# A Journey into Peer-to-Peer Exchange Architecture
 
 When I started thinking about decentralized exchanges, I kept running into a conceptual problem. Most systems that call themselves "decentralized" still rely on some form of central coordination. There's always a server somewhere, a database that everyone queries, or an authority that validates transactions. [BitfiTech](https://github.com/RadW2020/bitfitech) emerged from a simple question: what would it actually take to build an exchange where no central server exists at all?
 
