@@ -5,9 +5,7 @@ title: Decentralized Exchange
 
 # A Journey into Peer-to-Peer Exchange Architecture
 
-When I started thinking about decentralized exchanges, I kept running into a conceptual problem. Most systems that call themselves "decentralized" still rely on some form of central coordination. There's always a server somewhere, a database that everyone queries, or an authority that validates transactions. [BitfiTech](https://github.com/RadW2020/bitfitech) emerged from a simple question: what would it actually take to build an exchange where no central server exists at all?
-
-The answer turned out to be more complex and fascinating than I initially imagined. This project became an exploration of distributed hash tables, gossip protocols, vector clocks, and the subtle challenges of maintaining consistency across independent nodes. What follows is a reflection on building a genuinely peer-to-peer trading system.
+This topic turned out to be more complex and fascinating than I initially imagined. This project became an exploration of distributed hash tables, gossip protocols, vector clocks, and the subtle challenges of maintaining consistency across independent nodes. What follows is a reflection on building a genuinely peer-to-peer trading system.
 
 ---
 
@@ -22,8 +20,6 @@ I wanted to explore whether we could eliminate these issues entirely by distribu
 ---
 
 ## Architecture: Distributing Everything
-
-The architecture that emerged centers on several interconnected components, each addressing a specific aspect of the distributed coordination problem.
 
 At the core sits a distributed orderbook where each node maintains its own independent instance. When someone creates an order on one node, that order needs to propagate to every other node in the network. I chose to implement this using a gossip protocol similar to how BitTorrent distributes files. Each node that receives a new order forwards it to its peers, creating a cascade that eventually reaches the entire network. This approach proved surprisingly robust, as there's no single communication path that could fail and prevent order propagation.
 
@@ -153,7 +149,7 @@ The discovery process uses three complementary mechanisms simultaneously. mDNS h
 
 ## Technical Foundations
 
-The implementation relies on Node.js version 20.19.5 or higher as the runtime environment. Node's asynchronous event-driven architecture maps well to the concurrent nature of peer-to-peer networking, where a node might be simultaneously receiving orders from some peers while forwarding them to others and processing matches locally.
+Node's asynchronous event-driven architecture maps well to the concurrent nature of peer-to-peer networking, where a node might be simultaneously receiving orders from some peers while forwarding them to others and processing matches locally.
 
 The networking layer builds on standard TCP sockets for peer-to-peer communication, with Grenache providing the distributed hash table abstraction. Using Kademlia as the DHT algorithm was particularly interesting because it has proven reliability in large-scale systems like IPFS and Ethereum's discovery protocol. The algorithm organizes nodes into a structured overlay network that enables efficient lookups with logarithmic complexity.
 
@@ -226,7 +222,7 @@ The system supports three operational modes, each useful for different purposes.
 
 For testing and development, there's a pure P2P mode that removes the DHT layer entirely, leaving only direct TCP connections. This simplifies debugging by reducing the number of moving parts, though it doesn't meet the full specification since the Grenache DHT was part of the original design requirements.
 
-Setting up the system requires Node.js and npm with at least 512MB of available RAM. The quick start process involves cloning the repository, installing dependencies with npm, and starting a node. By default, it uses port 3000 for P2P connections, port 20001 for the Grape DHT, and port 30001 for the Grape API.
+The quick start process involves cloning the repository, installing dependencies with npm, and starting a node. By default, it uses port 3000 for P2P connections, port 20001 for the Grape DHT, and port 30001 for the Grape API.
 
 Testing with multiple nodes is straightforward. Each node can be configured using environment variables to use different ports. I typically run one node with default settings, then start additional nodes with P2P_PORT set to different values like 3001, 3002, and so on. The nodes discover each other through mDNS on the local network and establish connections automatically.
 
@@ -287,13 +283,7 @@ The codebase organizes into several logical layers. The p2p directory contains e
 
 Utility modules provide cross-cutting concerns like configuration management, logging, and vector clock operations. Separating the vector clock logic into its own module made it easier to test and reason about independently from the rest of the system.
 
-The test suite covers multiple scenarios including peer discovery in various network conditions, order propagation across the network, edge cases in the matching algorithm, fault handling and automatic reconnection, and orderbook synchronization between nodes. Running the tests with coverage reporting helped identify areas that needed additional test cases.
-
 ## Security Considerations and Current Limitations
-
-The current implementation includes basic security measures like peer verification through a handshake protocol, validation of message schemas to reject malformed data, rate limiting to prevent spam attacks, and fault isolation to prevent one misbehaving peer from affecting others.
-
-However, this is fundamentally a permissionless network where any node can join. For a production deployment, several additional security layers would be necessary. All communications should be encrypted using TLS to prevent eavesdropping and man-in-the-middle attacks. Messages should be cryptographically signed so recipients can verify their authenticity. Byzantine fault tolerance mechanisms would protect against actively malicious nodes that try to manipulate the orderbook or matching results. Access control through whitelisting or cryptographic identity verification would prevent unauthorized nodes from joining the network.
 
 I built this primarily as a learning platform for exploring distributed systems concepts, not as production-ready financial infrastructure. The educational value comes from understanding how these components fit together and seeing them operate in a functioning system.
 
@@ -301,7 +291,7 @@ I built this primarily as a learning platform for exploring distributed systems 
 
 ## What I Learned About Distributed Systems
 
-Building BitfiTech deepened my understanding of several fundamental distributed systems concepts. The CAP theorem became concrete rather than abstract. In a network partition, you must choose between consistency and availability. BitfiTech chooses availability, allowing nodes to continue operating even when partitioned, accepting that they may temporarily have divergent views of the orderbook.
+Building BitfiTech deepened my understanding of several fundamental distributed systems concepts. In a network partition, you must choose between consistency and availability. BitfiTech chooses availability, allowing nodes to continue operating even when partitioned, accepting that they may temporarily have divergent views of the orderbook.
 
 ### CAP Theorem Trade-offs in BitfiTech
 
@@ -338,37 +328,17 @@ Testing distributed systems presented unique challenges. Race conditions that ne
 
 ---
 
-## Influences and Intellectual Lineage
-
-BitfiTech stands on the shoulders of several influential distributed systems. BitTorrent demonstrated that gossip protocols could scale to millions of nodes without central coordination. Bitcoin showed how a distributed network could maintain consensus about transaction ordering. The Kademlia DHT, used in IPFS and Ethereum, proved that structured overlays could provide efficient lookups in peer-to-peer networks.
-
-Studying Raft and Paxos consensus algorithms informed my thinking about consistency even though BitfiTech doesn't implement full consensus. Understanding how those algorithms guarantee agreement helped clarify what guarantees BitfiTech does and doesn't provide.
-
----
-
-## Current Limitations and Future Directions
-
-The implementation currently functions as an educational simulator rather than handling real assets. Scaling beyond about 100 nodes hasn't been tested, and I expect the gossip protocol latency would increase significantly with network size. Geographic distribution would introduce additional latency challenges that the current architecture doesn't address.
-
-Several directions could extend this work. Adding TLS encryption would be straightforward and important for any real deployment. A reputation system where nodes track peer behavior could help identify and isolate misbehaving nodes. Optimizing propagation for large networks might involve hierarchical gossip or more sophisticated routing. Integrating with actual blockchains would make it possible to settle real trades, transforming this from a simulator into a functional exchange. Building a web dashboard for visualization would help understand network topology and order flow.
-
----
-
 ## Reflections on Decentralization
 
 Working on this project clarified what "decentralization" actually means in practice. It's not just about using blockchain or distributing some components. True decentralization means there's no node whose failure breaks the system, no authority that can censor transactions, and no component that users must trust.
 
 Achieving this required distributing not just data but also logic. Every node runs the matching algorithm independently. Every node maintains the complete orderbook. Every node participates in propagating orders. This redundancy comes at a cost in terms of network bandwidth and computation, but it's necessary to eliminate central points of control.
 
-The transparency that comes with decentralization was also valuable. Because every node has complete information and all communication is peer-to-peer, anyone can audit the system's behavior. There's no black box where things happen invisibly. This creates accountability through architecture rather than through trust in operators.
-
 ---
 
 ## Practical Applications
 
 Beyond its use as an exchange, BitfiTech serves as a platform for studying distributed systems concepts. The codebase provides concrete examples of DHT implementation, gossip protocol design, vector clock usage, and circuit breaker patterns. Someone learning about these topics can see them working together in an integrated system rather than as isolated abstractions.
-
-For research into distributed exchange designs or DeFi architecture, this provides a foundation that could be extended in various directions. The core peer-to-peer infrastructure could support different matching algorithms, alternative consensus mechanisms, or integration with different blockchain settlement layers.
 
 ---
 
@@ -383,8 +353,6 @@ The logging system provides visibility into what's happening. Setting LOG_LEVEL 
 ---
 
 ## Closing Thoughts
-
-BitfiTech represents an exploration of what genuine decentralization requires in a trading system. It demonstrates that eliminating central servers is possible, though it introduces new challenges around consistency, ordering, and fault tolerance.
 
 The project taught me that distributed systems require thinking differently about familiar problems. Without a central database, you need gossip protocols. Without a central clock, you need vector clocks. Without a central authority, you need cryptographic verification. Each removed point of centralization necessitates new mechanisms to replace the coordination that centralization provided.
 
