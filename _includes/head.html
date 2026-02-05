@@ -9,6 +9,10 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1"
   />
 
+  {% if page.noindex %}
+  <meta name="robots" content="noindex" />
+  {% endif %}
+
   {% if page.image %}
   <meta
     name="image"
