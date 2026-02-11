@@ -40,4 +40,3 @@ Beyond coding, I'm passionate about:
 [LinkedIn](https://www.linkedin.com/in/raul-jimenez-martin-radw2020/)
 [GitHub](https://github.com/RadW2020)
 
-`console.log("Hello World! 👋");`
