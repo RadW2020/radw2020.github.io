@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Privacy Policy for Fabulous Universe
+title: Privacy Policy for Fabulous Universe Manager
+sitemap: false
 noindex: true
 ---
 
 **Last updated: February 5, 2026**
 
-Fabulous Universe ("we", "our") manages this application solely for user service content scheduling and distribution. We respect your privacy and are committed to protecting the personal data of registered users and the security of our connected accounts.
+Fabulous Universe Manager ("we", "our") manages this application solely for user service content scheduling and distribution. We respect your privacy and are committed to protecting the personal data of registered users and the security of our connected accounts.
 
 ## 1. Data We Access
 

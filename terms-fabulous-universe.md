@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Terms of Service - Fabulous Universe
+title: Terms of Service - Fabulous Universe Manager
+sitemap: false
 noindex: true
 ---
 
 **Last updated: February 5, 2026**
 
-These terms govern the use of the Fabulous Universe user service tool ("the Service"). By using the Service, you agree to these terms.
+These terms govern the use of the Fabulous Universe Manager user service tool ("the Service"). By using the Service, you agree to these terms.
 
 ## 1. Purpose of the Service
 
@@ -14,7 +15,7 @@ The Service is a service tool for registered users to manage social media assets
 
 ## 2. Account Authorization
 
-By connecting your TikTok account, you grant Fabulous Universe permission to upload video content to your account servers and publish content to your public feed on your behalf at scheduled times.
+By connecting your TikTok account, you grant Fabulous Universe Manager permission to upload video content to your account servers and publish content to your public feed on your behalf at scheduled times.
 
 ## 3. Content Responsibility
 
