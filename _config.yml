@@ -22,9 +22,9 @@ kramdown:
 permalink: pretty
 
 # Setup
-title: The ദloj
-tagline: "Notes from other times"
-description: "Backend Engineer specializing in high-performance architectures and clean code."
+title: "Raúl JM"
+tagline: "Backend Developer · Node.js, AWS & Scalable Systems"
+description: "Backend Developer with 8+ years building data pipelines, microservices, and cloud infrastructure. From IoT platforms to fleet management at scale."
 url: https://uliber.com
 baseurl: /
 
