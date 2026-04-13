@@ -2,6 +2,7 @@
 layout: post
 title: Reactive Architecture <> Reactive Programming
 image: f_a_reactivity.jpg
+featured: true
 ---
 
 - Reactive Systems and Reactive Programming are often misunderstood. 

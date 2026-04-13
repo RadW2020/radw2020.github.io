@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Observability Journey
+featured: true
 ---
 
 # Building Enterprise-Grade Distributed Tracing for Vercel: A Complete Observability Journey

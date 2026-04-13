@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quantum Service en QuPot - Aleatoriedad cuántica real para loterías blockchain
+featured: true
 ---
 
 La aleatoriedad es un pilar fundamental en cualquier sistema de lotería. Pero, ¿qué pasaría si en vez de confiar en algoritmos clásicos, pudieras usar la física cuántica para obtener números realmente impredecibles? Eso es exactamente lo que hace el subservicio `quantum-service` de [QuPot](https://github.com/RadW2020/QuPot): un microservicio que genera números aleatorios usando principios cuánticos, integrándose en una arquitectura de microservicios y blockchain.

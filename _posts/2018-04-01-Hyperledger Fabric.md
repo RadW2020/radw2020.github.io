@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hyperledger Fabric
+featured: true
 ---
 
 En este artículo voy a  pasar directamente a comentar sobre Hyperledger Fabric pero si eres un no iniciado y quieres primero romper el hielo con esta tecnología, puedes visitar [www.ibm.com/blockchain/hyperledger.html](https://www.ibm.com/blockchain/hyperledger.html) o en la wikipedia [wiki/Hyperledger](https://es.wikipedia.org/wiki/Hyperledger).

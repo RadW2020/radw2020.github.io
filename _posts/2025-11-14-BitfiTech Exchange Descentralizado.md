@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Decentralized Exchange
+featured: true
 ---
 
 # A Journey into Peer-to-Peer Exchange Architecture
