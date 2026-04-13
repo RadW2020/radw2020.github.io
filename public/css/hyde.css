@@ -73,6 +73,17 @@ html {
 /* Sidebar links */
 .sidebar a {
   color: #fff;
+  transition: opacity 0.2s ease;
+}
+.sidebar a:hover {
+  opacity: 0.85;
+}
+
+/* Avatar */
+.sidebar-avatar {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 /* About section */
@@ -97,6 +108,20 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+}
+
+/* Social links */
+.sidebar-social {
+  margin-bottom: 1rem;
+}
+.sidebar-social a {
+  color: rgba(255,255,255,.7);
+  margin-right: 0.75rem;
+  text-decoration: none;
+}
+.sidebar-social a:hover {
+  color: #fff;
+  opacity: 1;
 }
 
 /* Sticky sidebar
@@ -177,13 +202,13 @@ a.sidebar-nav-item:focus {
 
 /* Base16 (http://chriskempson.github.io/base16/#default) */
 
-/* Red */
+/* Teal */
 .theme-base-08 .sidebar {
-  background-color: #ac4142;
+  background-color: #2a6f7f;
 }
 .theme-base-08 .content a,
 .theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
+  color: #2a6f7f;
 }
 
 /* Orange */
