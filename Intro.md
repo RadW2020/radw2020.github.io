@@ -33,5 +33,5 @@ I've worked across domains that demand reliability at scale: **IoT platforms** p
 
 I'm open to new opportunities. If you're looking for a backend developer who takes ownership and builds systems that last, get in touch.
 
-[LinkedIn](https://www.linkedin.com/in/raul-jimenez-martin-radw2020/) · [GitHub](https://github.com/RadW2020)
+[raul@uliber.com](mailto:raul@uliber.com) · [LinkedIn](https://www.linkedin.com/in/raul-jimenez-martin-radw2020/) · [GitHub](https://github.com/RadW2020)
 
