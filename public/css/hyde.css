@@ -67,6 +67,7 @@ html {
     bottom: 0;
     width: 18rem;
     text-align: left;
+    overflow-y: auto;
   }
 }
 
@@ -133,10 +134,28 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
+    top:    1.5rem;
     right:  1rem;
-    bottom: 1rem;
+    bottom: 1.5rem;
     left:   1rem;
+    display: flex;
+    flex-direction: column;
   }
+  .sidebar-about {
+    margin-bottom: 2rem;
+  }
+  .sidebar-nav {
+    flex: 1 1 auto;
+  }
+  .sidebar-footer {
+    margin-top: auto;
+  }
+}
+
+.sidebar-footer .footer-text {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
 }
 
 
