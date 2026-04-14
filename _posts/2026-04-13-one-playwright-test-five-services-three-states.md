@@ -10,6 +10,8 @@ The problem wasn't that they didn't work. The problem was that they told me noth
 
 So I replaced them with a single MultiStep Check.
 
+![Shogunito MultiStep check overview](/images/shogunito-multistep-overview.png)
+
 ## The check
 
 ```typescript
@@ -96,6 +98,8 @@ Most monitoring is binary: up or down. But there's a third state that matters mo
 - **Red** — wake someone up
 
 The yellow state has saved me from both false urgency (paging for a slow response) and silent decay (a service getting slower every week until it times out).
+
+![MultiStep check steps and states](/images/shogunito-multistep-states.png)
 
 ## Why validate the OpenAPI spec inside the monitoring
 
