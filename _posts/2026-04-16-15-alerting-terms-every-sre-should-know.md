@@ -16,6 +16,28 @@ It's the first of a three-part series:
 
 ---
 
+## At a glance
+
+| #  | Term                     | In one line                                                            | Category            |
+|----|--------------------------|------------------------------------------------------------------------|---------------------|
+| 1  | [Alert rule](#1-alert-rule)                         | The boolean condition that defines *when* an alert fires.              | Life cycle          |
+| 2  | [Firing](#2-firing)                                 | The alert's condition has been true long enough to count.              | Life cycle          |
+| 3  | [Pending](#3-pending)                               | Condition is true, but the `for:` buffer hasn't elapsed yet.           | Life cycle          |
+| 4  | [Silence](#4-silence)                               | Time-bounded mute of notifications — the alert still evaluates.        | Noise control       |
+| 5  | [Inhibition](#5-inhibition)                         | If alert A fires, suppress alert B automatically.                      | Noise control       |
+| 6  | [Grouping](#6-grouping)                             | Collapse many related instances into a single notification.            | Noise control       |
+| 7  | [Flapping](#7-flapping)                             | Alert oscillating fast between firing and resolved.                    | Pathologies         |
+| 8  | [Alert fatigue](#8-alert-fatigue)                   | On-call desensitised by too many low-value notifications.              | Pathologies         |
+| 9  | [Cardinality explosion](#9-cardinality-explosion)   | Too many label combinations wrecking storage and queries.              | Pathologies         |
+| 10 | [Contact point](#10-contact-point)                  | The destination a notification is sent to (Slack, email, webhook…).    | Routing             |
+| 11 | [Notification policy](#11-notification-policy)      | The tree that routes each alert to the right contact point.            | Routing             |
+| 12 | [SLI / SLO](#12-sli--slo)                           | What you measure vs the internal target you commit to.                 | Telemetry           |
+| 13 | [RED method](#13-red-method)                        | Rate, Errors, Duration — the three metrics per request-driven service. | Telemetry           |
+| 14 | [Label](#14-label)                                  | Key-value pair that dimensions a metric into a unique series.          | Prometheus basics   |
+| 15 | [Fingerprint](#15-fingerprint)                      | Hash of labels that uniquely identifies an alert instance.             | Prometheus basics   |
+
+---
+
 ## Block 1 — The life cycle of an alert
 
 ### 1. Alert rule
