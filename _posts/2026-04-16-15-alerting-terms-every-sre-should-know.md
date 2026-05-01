@@ -242,7 +242,7 @@ It's the first of a three-part series:
 
 Now that the vocabulary is out of the way, the follow-ups get more concrete:
 
-- **Next post:** *"15 PromQL concepts every SRE should know"* — because you can't talk about alerts without talking about the query language that powers them.
+- **Next post:** [*"15 PromQL concepts every SRE should know"*]({% post_url 2026-05-01-15-promql-concepts-every-sre-should-know %}) — because you can't talk about alerts without talking about the query language that powers them.
 - **After that:** *"15 observability patterns every SRE should know"* — error budgets, exemplars, golden signals, and friends.
 
 If I missed a term you argue about every week, tell me and I'll add it to the list before the next instalment.
