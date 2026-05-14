@@ -14,7 +14,7 @@ The honest short answer, based on what I measured:
 - **The payoff is huge if you can afford the squeeze.** On-board processing turns a Sentinel-1-style scene from a **27.9 GB downlink** into a few hundred contact reports — a **~1,900× compression ratio**, and the end-to-end "sensor → operator" latency drops by **5.3×**.
 - **The hard part isn't the model. It's the paper trail.** EU procurement (and the AI Act) wants every detection to be reproducible, hash-traceable, and explainable. That's the part I spent most of my time on.
 
-Everything below is live and auditable in a public Grafana at [aidra.uliber.com](https://aidra.uliber.com).
+Everything below is live and auditable in a public Grafana at [aidra.uliber.com](https://aidra.uliber.com), and the code is on [GitHub](https://github.com/RadW2020/aidra-feasibility-study).
 
 [![Vessel detections, Strait of Gibraltar]({{ site.baseurl }}/images/aidra/map-detections.png "Every green dot is an AI-detected vessel, weeks of Sentinel-1 SAR over the Strait of Gibraltar")]({{ site.baseurl }}/images/aidra/map-detections.png)
 
@@ -144,4 +144,4 @@ It's a deliberately small, honest exercise in answering: *given the real-world c
 
 ---
 
-*Code, dashboards and the full evidence bundle live at the [AIDRA Grafana](https://aidra.uliber.com). Inspired by SatCen tender SATCEN/2026/OP/0003; not affiliated with SatCen or the European Union.*
+*Code on [GitHub](https://github.com/RadW2020/aidra-feasibility-study). Dashboards and the full evidence bundle live at the [AIDRA Grafana](https://aidra.uliber.com). Inspired by SatCen tender SATCEN/2026/OP/0003; not affiliated with SatCen or the European Union.*
