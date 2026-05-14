@@ -20,6 +20,10 @@ Everything below is live and auditable in a public Grafana at [aidra.uliber.com]
 
 *Every green dot is a vessel AIDRA flagged on a Sentinel-1 SAR scene. Strait of Gibraltar, several weeks of acquisitions. This is what the question "can the satellite see ships?" looks like when you say yes.*
 
+[![Vessel detection detail]({{ site.baseurl }}/images/aidra/detection.png "A single vessel detection, as seen by the YOLOv8 model on SAR imagery")]({{ site.baseurl }}/images/aidra/detection.png)
+
+*A single vessel detection, as seen by the YOLOv8 model on SAR imagery. The 'detection' is a set of coordinates and a confidence score tied to a specific SAR chip.*
+
 ---
 
 ## Why this project exists
