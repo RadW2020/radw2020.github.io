@@ -30,7 +30,7 @@ Everything below is live and auditable in a public Grafana at [aidra.uliber.com]
 
 In early 2026 the **EU Satellite Centre (SatCen)** in Madrid published a tender — **SATCEN/2026/OP/0003** — asking for a feasibility study on running AI directly on-board Earth-observation satellites. The use case they care about is **maritime surveillance**: spotting vessels in SAR (radar) imagery without having to wait for the satellite to dump the full scene to a ground station.
 
-I'm not bidding for that tender. But the question was genuinely interesting, and along the way I discovered something I had no idea about: **Sentinel satellite imagery is open and free** — anyone can pull it from the [Copernicus Data Space portal](https://dataspace.copernicus.eu/) with a free account. Decades of EU-funded radar imagery of the entire planet, a few clicks away. That alone was worth the rabbit hole.
+I'm not bidding for that tender. But the question was genuinely interesting, and along the way I discovered something I had no idea about: **Sentinel satellite imagery is open and free** — anyone can pull it from the [Copernicus Data Space portal](https://dataspace.copernicus.eu/) with a free account. That alone was worth the rabbit hole.
 
 > *Is on-board AI a real engineering option in 2026, or still science-fiction with a marketing budget?*
 
@@ -42,7 +42,7 @@ The single biggest constraint of an on-board AI is **compute**: you have a few w
 
 I needed a way to simulate that without launching anything. The trick:
 
-- The whole AIDRA pipeline runs on a single **Oracle Cloud ARM Free Tier** VM (4 OCPU, 24 GB RAM, Frankfurt region — EU sovereignty matters here).
+- The whole AIDRA pipeline runs on a single **Oracle Cloud ARM** VM — 4 Ampere Altra cores, 24 GB RAM, EU data residency.
 - That box plays the role of "ground reference."
 - On top of it I define five **constraint profiles** — `ground`, `sat-mid`, `sat-low`, `sat-strict`, `sat-extreme` — that throttle the same model down to spacecraft-class budgets (down to **0.25 OCPU / 512 MB RAM** in the most aggressive one).
 - The same Sentinel-1 scene runs through all five. You can see exactly where the pipeline *starts to break*.
@@ -51,7 +51,7 @@ That last sentence is the whole point of the study. Not "does it work in the lab
 
 ![AIDRA Grafana home: pipeline runs, vessels detected, models registered]({{ site.baseurl }}/images/aidra/home.png "AIDRA Grafana home dashboard")
 
-*A few numbers from a recent run: 24 pipeline executions, 6,571 vessels detected across all profiles, 3 model variants registered, last run 4 hours ago. The home dashboard is the index — every other panel drills into one piece of the story.*
+*The home dashboard is the index.*
 
 ---
 
@@ -74,7 +74,7 @@ Half the disk. ~35% less wall-clock time. **0.3 percentage points** of confidenc
 
 ### 2. The on-board processing payoff
 
-This is the chart that justifies the whole project. The question is: *what happens to the end-to-end latency if the satellite processes the scene on-board and only downlinks the contact list, vs the traditional "dump the raw scene, process on the ground" workflow?*
+The question is: *what happens to the end-to-end latency if the satellite processes the scene on-board and only downlinks the contact list, vs the traditional "dump the raw scene, process on the ground" workflow?*
 
 | Downlink | Without OBDP | With OBDP | Speed-up |
 |---|---|---|---|
@@ -138,11 +138,11 @@ For the curious — the actual stack:
 - **Datasets:** xView3-SAR, HRSID, OpenSARShip. All open, all license-compatible.
 - **Database:** PostgreSQL 16 + PostGIS 3.4.
 - **Observability:** Prometheus + Grafana + Loki, with `run_id` propagated end-to-end through logs and metric labels. The dashboards in this post are read straight from production.
-- **Hosting:** OCI Free Tier ARM (Frankfurt). One small VM, no GPU, EU-only data residency.
+- **Hosting:** OCI ARM (Ampere Altra). One small VM, no GPU, EU-only data residency.
 
 ## What this study is *not*
 
-It's not a satellite. It's not a product. It's not a benchmark of state-of-the-art vessel detection (the SOTA mAP figures live in academic papers, not on a Free Tier VM). It does not promise to solve maritime surveillance.
+It's not a satellite. It's not a product. It's not a benchmark of state-of-the-art vessel detection (the SOTA mAP figures live in academic papers, not on a single ARM VM). It does not promise to solve maritime surveillance.
 
 It's a deliberately small, honest exercise in answering: *given the real-world constraints of on-board hardware, EU data sovereignty, and AI Act compliance, what does a working ship-detection pipeline actually look like, and where does it crack?*
 
