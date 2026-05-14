@@ -59,16 +59,16 @@ That last sentence is the whole point of the study. Not "does it work in the lab
 
 Three results stand out. None of them are surprising in isolation. The interesting thing is they're all measured on the **same hardware**, with the **same model family**, end-to-end, and you can replay every single number from the public dashboards.
 
-### 1. Compression: smaller, faster, basically the same accuracy
+### 1. Compression: smaller, faster, same behaviour
 
 Quantising the YOLOv8 detector from FP32 to dynamic INT8 — a one-line PyTorch change — gives a clean trade-off:
 
-| Variant | Model size | Total inference (50 scenes) | Avg confidence | Peak RAM |
+| Variant | Model size | Total inference (50 scenes) | Avg detection score | Peak RAM |
 |---|---|---|---|---|
 | fp32 (baseline) | 49.6 MB | 52.7 min | 53.9% | 3.50 GB |
 | **dynamic_int8** | **25.1 MB** | **33.9 min** | **53.6%** | 4.35 GB |
 
-Half the disk. ~35% less wall-clock time. **0.3 percentage points** of confidence lost — well within noise. Peak RAM actually goes *up* a bit (PyTorch's dynamic INT8 keeps some FP32 staging buffers), which is the kind of detail you only see once you measure on the real target.
+Half the disk. ~35% less wall-clock time. The INT8 variant produces effectively the same detections as the FP32 baseline — the 0.3-point gap in average detection score is well within noise (this is the model's own confidence in each box, not accuracy against labels). Peak RAM actually goes *up* a bit (PyTorch's dynamic INT8 keeps some FP32 staging buffers), which is the kind of detail you only see once you measure on the real target.
 
 ![Compression benchmark dashboard]({{ site.baseurl }}/images/aidra/compression-bench.png "Compression benchmark: fp32 baseline vs dynamic INT8")
 
@@ -83,11 +83,11 @@ The question is: *what happens to the end-to-end latency if the satellite proces
 | Ka-band (300 Mbps) | 13 | 18,996 | 1,461× |
 | Laser (1.8 Gbps) | 40 | 56,988 | 1,425× |
 
-On a typical X-band link, a satellite that processes scenes on-board can deliver **~1,500× more useful daily output** than one that just acts as a camera. Or, looked at the other way: **27.9 GB** of raw imagery becomes a few kilobytes of geo-tagged contact reports — a **~1,900× data compression ratio**.
+On a typical X-band link, a satellite that processes scenes on-board can deliver **~1,500× more useful daily output** than one that just acts as a camera. The ratio looks extreme because we're comparing a raster downlink (pixels) to a vector downlink (a contact list) — that's apples-to-oranges by construction, but it's exactly the proposition: emit contacts, not pixels, and the radio link stops being the bottleneck.
 
 ![Downlink and OBDP value]({{ site.baseurl }}/images/aidra/obdp-value.png "Why on-board processing matters: 27.9 GB → contact reports")
 
-The end-to-end "vessel passes overhead → operator sees the contact" latency drops by **5.3×** on the orbits I modelled, mostly because you don't have to wait for the next ground-station pass to dump a 9 GB raw scene.
+In the orbital scenarios I modelled (LEO ~500 km, X-band downlink, constrained ground-station coverage), the end-to-end "vessel passes overhead → operator sees the contact" latency drops by **~5×**. Most of that win isn't faster processing — it's not waiting for the next ground-station pass to dump a multi-GB raw scene.
 
 ![Orbital latency: 5.30x speedup]({{ site.baseurl }}/images/aidra/orbital-latency.png "Orbital latency: 5.30x speedup with on-board processing")
 
@@ -97,7 +97,7 @@ What didn't work, or only barely worked:
 
 - **`sat-extreme` (0.25 OCPU, 512 MB)** is below the floor. The model loads, but the runtime thrashes on swap and the per-scene latency goes from minutes to *hours*. That's the failure mode worth reporting — not a number to brag about.
 - **Cluster anomaly flags fire more often at the swath edge** than I'd like. The current preprocessing chain (orbit correction → σ⁰ calibration → speckle filter → terrain correction → edge swath filter) cleans most of it, but a non-trivial fraction of "detections" near the image border are still SAR artefacts, not boats. I keep them, tag them `cluster_anomaly`, and exclude them from the headline metrics.
-- **Confidence around 54%** is fine for a feasibility study using off-the-shelf weights, but it's not a production number. A real deployment would fine-tune on a balanced xView3-SAR + HRSID + OpenSARShip mix and probably land at 75–85%.
+- **The detector is not validated against ground truth in this study.** The ~54% I report is the model's own confidence per detection, not precision/recall against labelled vessels. A real deployment would benchmark against xView3-SAR / HRSID labels and report Pd / FAR — the metrics SatCen actually cares about. This study measures whether the *pipeline* is viable, not whether *this specific detector* is production-ready.
 
 I'm noting these because the *point* of a feasibility study is not to oversell.
 
